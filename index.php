@@ -8,11 +8,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Cultrv8</title>
   </head>
+  
   <body>
-    <h1>Hello, world!</h1>
+	
+	<!-- Image and text -->
+			<nav class="navbar">
+			  <a class="navbar-brand" href="#">
+				<img src="img/Cultrv8_logo.jpg" width="250" height="179" class="d-inline-block align-top" alt="">
+			  </a>
+			</nav>
+			
+			  <!-- Content here -->
+			<div class="container">
+						<h1>Hello, world!</h1>
 
+						
+						
+			
+			
+			</div>
+	
+	
+	
+	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
