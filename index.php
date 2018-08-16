@@ -22,11 +22,21 @@
 			
 			  <!-- Content here -->
 			<div class="container">
-						<h1>Hello, world!</h1>
-
-						
-						
 			
+				
+						<div class="text-center">
+							<img src="img/Crab_home_big_logo.jpg" class="img-fluid" alt="Cultrv8 Crab Logo">
+						</div>
+				
+				
+				
+					  <h1>Hey, you can call me Charlie, or call me Crab, I don't really care. What I DO care about is what you think about this place, I mean who doesn't have an opinion eh?</h1>
+					  
+					  <h2 class="text-muted">But lets find out while having a bit of fun, so if you are prepared to play a little game, lets get going - click button below</h2>
+				
+						
+
+				<div class="float-right"><a class="btn btn-success btn-lg" href="#">Find out more!</a></div><br>
 			
 			</div>
 	
