@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Cultrv8</title>
+    <title>Question 1- Cultrv8</title>
   </head>
   
   <body>
@@ -30,13 +30,19 @@
 				
 				
 				
-					  <h1>Hey, you can call me Charlie, or call me Crab, I don't really care. What I DO care about is what you think about this place, I mean who doesn't have an opinion eh?</h1>
+					  <h1>So, here's an easy game to start with, it's called Cars:</h1>
 					  
-					  <h2 class="text-muted">But lets find out while having a bit of fun, so if you are prepared to play a little game, lets get going - click button below</h2>
-				
+					  <h2 class="text-muted">If you were to compare your organisation to a kind of vehicle, which of these would you choose:</h2>
+					  
+						<ul class="list-group">
+						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Formula 1 car</li>
+						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Family Wagon</li>
+						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Four Wheel Drive</li>
+						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Limousine</li>
+						</ul>
 						
 
-				<div class="float-right"><a class="btn btn-success btn-lg" href="cars.php">Find out more!</a></div><br>
+				<div class="float-right"><a class="btn btn-success btn-lg" href="#">Next</a></div><br>
 			
 			</div>
 	
