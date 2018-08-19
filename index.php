@@ -32,7 +32,7 @@
 				
 					  <h1>Hey, you can call me Charlie, or call me Crab, I don't really care. What I DO care about is what you think about this place, I mean who doesn't have an opinion eh?</h1>
 					  
-					  <h2 class="text-muted">But lets find out while having a bit of fun, so if you are prepared to play a little game, lets get going - click button below</h2>
+					  <h2>But lets find out while having a bit of fun, so if you are prepared to play a little game, lets get going - click button below</h2>
 				
 						
 

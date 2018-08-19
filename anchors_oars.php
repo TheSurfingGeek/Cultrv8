@@ -8,12 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Question 1- Cultrv8</title>
+    <title>Question 2- Anchors & Oars</title>
   </head>
   
   <body>
 	
-	<!-- NAV  BAR ------------------------------------------------------------>
+	<!-- Image and text -->
+			<!-- NAV  BAR ------------------------------------------------------------>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				  <a class="navbar-brand" href="index.php">
 					<img src="img/Cultrv8_logo.jpg" width="250" height="179" class="d-inline-block align-top" alt="">
@@ -27,11 +28,11 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="index.php">Back <span class="sr-only">(current)</span></a>
+										<a class="nav-link" href="index.php">Back <span class="sr-only">(current)</span></a>
 										
 									  </li>
 									  <li class="nav-item">
-										<a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a>
+										<a class="nav-link" href="anchors_oars.php">Next</a>
 										
 									  </li>
 									</ul>
@@ -49,19 +50,16 @@
 				
 				
 				
-					  <h1>So, here's an easy game to start with, it's called Cars:</h1>
+					  <h1>OK, ready for the next game? This one's called Anchors and Oars.</h1>
 					  
-					  <h2>If you were to compare your organisation to a kind of vehicle, which of these would you choose:</h2>
+					  <h2>For you non nautical types, all you need to know is that Anchors hold us back, and Oars propel us forwards - got it?</h2>
+
+					  <h2>What do you see are the cultural anchors and oars for your organisation?</h2>
 					  
-						<ul class="list-group">
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Formula 1 car</li>
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Family Wagon</li>
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Four Wheel Drive</li>
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Limousine</li>
-						</ul>
+					
 						
 
-				<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a></div><br>
+				<div class="float-right"><a class="btn btn-success btn-lg" href="#">Next</a></div><br>
 			
 			</div>
 	
