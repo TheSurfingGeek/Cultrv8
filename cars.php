@@ -31,7 +31,7 @@
 										
 									  </li>
 									  <li class="nav-item">
-										<a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a>
+										<a class="btn btn-success btn-lg" href="cars_response.php">Next</a>
 										
 									  </li>
 									</ul>
@@ -53,15 +53,35 @@
 					  
 					  <h2>If you were to compare your organisation to a kind of vehicle, which of these would you choose:</h2>
 					  
-						<ul class="list-group">
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Formula 1 car</li>
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Family Wagon</li>
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Four Wheel Drive</li>
-						  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Limousine</li>
-						</ul>
-						
-
-				<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a></div><br>
+					<form>
+						<div class="form-check form-control-lg">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+							  <label class="form-check-label" for="exampleRadios1">
+								Formula 1 car
+							  </label>
+						</div>
+						<div class="form-check form-control-lg">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+							  <label class="form-check-label" for="exampleRadios2">
+								Family Wagon
+							  </label>
+						</div>
+						<div class="form-check form-control-lg">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+							  <label class="form-check-label" for="exampleRadios3">
+								Four Wheel Drive
+							  </label>
+						</div>
+						<div class="form-check form-control-lg">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option4">
+							  <label class="form-check-label" for="exampleRadios4">
+								Limousine
+							  </label>
+						</div>
+					 </form>
+					  
+					  <!-- this needs to be the form submit button --> 
+						<div class="float-right"><a class="btn btn-success btn-lg" href="cars_response.php">Next</a></div><br>
 			
 			</div>
 	

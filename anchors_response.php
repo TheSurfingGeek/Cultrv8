@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Question 3- Anchors & Oars</title>
+    <title>Question 2- Anchors & Oars</title>
   </head>
   
   <body>
@@ -27,7 +27,7 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="cars_response.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="cars.php">Back <span class="sr-only">(current)</span></a>
 										
 									  </li>
 									  <li class="nav-item">
@@ -50,47 +50,16 @@
 						</div>
 				
 				
+				
 					  <h1>OK, ready for the next game? This one's called Anchors and Oars.</h1>
 					  
 					  <h2>For you non nautical types, all you need to know is that Anchors hold us back, and Oars propel us forwards - got it?</h2>
-					  
+
 					  <h2>What do you see are the cultural anchors and oars for your organisation?</h2>
 					  
-					  
-						<form>
-								<div class="row">
-									<div class="col">
-										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
-									</div>
-								 
-									<div class="col">
-										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="1">
-									</div>
-								</div>	
-								
-								<div class="row">
-									<div class="col">
-										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="2">
-									</div>
-								 
-									<div class="col">
-										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="2">
-									</div>
-								</div>	
-								
-								<div class="row">
-									<div class="col">
-										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="3">
-									</div>
-								 
-									<div class="col">
-										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="3">
-									</div>
-								</div>	
-									
-						</form>
-						
 					
+						
+
 				<div class="float-right"><a class="btn btn-success btn-lg" href="#">Next</a></div><br>
 			
 			</div>
