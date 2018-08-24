@@ -56,45 +56,115 @@
 						<h2>What other words would you use to describe your choice, and your organisation?</h2>
 					  
 						<form>
-							<div class="form-group">
-								<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-								<select class="form-control form-control-lg" id="exampleFormControlSelect1">
-								  <option>Agree</option>
-								  <option>Disagree</option>
-								</select>
-							</div>
+							<div class="row"><!-- start of row -->
+									<div class="col-2">
+										<div class="form-group">
+											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+											<select class="form-control form-control-lg" id="exampleFormControlSelect1">
+											  <option>Agree</option>
+											  <option>Disagree</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="col-2">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Innovative">
+									</div>
+									
+									<div class="col">
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+									</div>	
+							</div><!-- End of row -->		
+									
+									
+									
+							<div class="row">  
+									<div class="col-2">
+											<div class="form-group">
+												<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+												 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+												  <option>Agree</option>
+												  <option>Disagree</option>
+												</select>
+											</div>
+									</div>
+									
+									<div class="col-2">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Risk Taking">
+									</div>
 							  
-							<div class="form-group">
-								<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-								 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
-								  <option>Agree</option>
-								  <option>Disagree</option>
-								</select>
-							</div>
+									<div class="col">
+										<input type="text" class="form-control" id="exampleInputPassword2" placeholder="">
+									</div>	
+							</div><!-- End of row -->	
+							
+							
+							<div class="row">
+									<div class="col-2">
+										<div class="form-group">
+											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+											 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+											  <option>Agree</option>
+											  <option>Disagree</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="col-2">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Adventurous">
+									</div>
+									
+									<div class="col">
+										<input type="text" class="form-control" id="exampleInputPassword3" placeholder="">
+									</div>	
+							</div><!-- End of row -->	
+									
+									
 							  
-							<div class="form-group">
-								<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-								 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
-								  <option>Agree</option>
-								  <option>Disagree</option>
-								</select>
-							</div>
-							  
-							<div class="form-group">
-								<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-								 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
-								  <option>Agree</option>
-								  <option>Disagree</option>
-								</select>
-							</div>
-							  
-							<div class="form-group">
-								<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-									<select class="form-control form-control-lg" id="exampleFormControlSelect1">
-									  <option>Agree</option>
-									  <option>Disagree</option>
-									</select>
-							</div>
+							<div class="row"> 
+									<div class="col-2">
+										<div class="form-group">
+											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+											 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+											  <option>Agree</option>
+											  <option>Disagree</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="col-2">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Dynamic">
+									</div>
+									
+									<div class="col">
+										<input type="text" class="form-control" id="exampleInputPassword4" placeholder="">
+									</div>	
+							</div><!-- End of row -->	
+									
+									
+							<div class="row">
+									<div class="col-2">
+										<div class="form-group">
+											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+												<select class="form-control form-control-lg" id="exampleFormControlSelect1">
+												  <option>Agree</option>
+												  <option>Disagree</option>
+												</select>
+										</div>
+									</div>
+									
+									<div class="col-2">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Disorganised">
+									</div>
+									
+									<div class="col">
+										<input type="text" class="form-control" id="exampleInputPassword5" placeholder="">
+									</div>	
+							</div><!-- End of row -->	
+									
+									
+									
+									
 						</form>
 
 
