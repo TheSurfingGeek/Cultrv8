@@ -42,20 +42,30 @@
 			  <!-- Content here -->
 			<div class="container">
 			
-				
-						<div class="text-center">
-							<img src="img/Crab_home_big_logo.jpg" class="img-fluid" alt="Cultrv8 Crab Logo">
-						</div>
-				
-				
-				
-						<h1>Hey, nice job! You chose "Four Wheel Drive"
+				<div class="row"><!-- Start of row 1 -->
+					<div class="col-sm"><!-- Column 1 -->
+			
+						<h1 class="mt-4">Hey, nice job! You chose "Four Wheel Drive"
 
 						<h2>Here's a list of words associated with this choice - what do you think of these? Agree/disagree? </h2>
 
 						<h2>What other words would you use to describe your choice, and your organisation?</h2>
-					  
-						<form>
+						
+						
+					</div><!-- End of column 1-->
+						
+					<div class="col-sm"><!-- Column 2 -->
+							<div class="text-center">
+								<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
+							</div>
+					</div><!-- End of column 2 -->
+					
+				</div><!-- end of row --->
+				
+				<div class="row"><!-- Start of row 2 -->
+				
+				<div class="col"><!-- Form column -->
+				<form>
 							<div class="row"><!-- start of row -->
 									<div class="col-2">
 										<div class="form-group">
@@ -161,16 +171,17 @@
 										<input type="text" class="form-control" id="exampleInputPassword5" placeholder="">
 									</div>	
 							</div><!-- End of row -->	
-									
-									
-									
-									
+							
+							<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a></div><br>
+										
 						</form>
-
-
-				<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a></div><br>
+				
+				
+				</div><!-- End of form column -->
+				
+				</div><!-- end of row 2 -->
 			
-			</div>
+			</div><!-- End of container -->
 	
 	
 	

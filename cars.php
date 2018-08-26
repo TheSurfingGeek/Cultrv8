@@ -43,47 +43,59 @@
 			<div class="container">
 			
 				
-						<div class="text-center">
-							<img src="img/Crab_home_big_logo.jpg" class="img-fluid" alt="Cultrv8 Crab Logo">
-						</div>
-				
-				
-				
-					  <h1>So, here's an easy game to start with, it's called Cars:</h1>
-					  
-					  <h2>If you were to compare your organisation to a kind of vehicle, which of these would you choose:</h2>
-					  
-					<form>
-						<div class="form-check form-control-lg">
-							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-							  <label class="form-check-label" for="exampleRadios1">
-								Formula 1 car
-							  </label>
-						</div>
-						<div class="form-check form-control-lg">
-							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-							  <label class="form-check-label" for="exampleRadios2">
-								Family Wagon
-							  </label>
-						</div>
-						<div class="form-check form-control-lg">
-							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-							  <label class="form-check-label" for="exampleRadios3">
-								Four Wheel Drive
-							  </label>
-						</div>
-						<div class="form-check form-control-lg">
-							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option4">
-							  <label class="form-check-label" for="exampleRadios4">
-								Limousine
-							  </label>
-						</div>
-					 </form>
-					  
-					  <!-- this needs to be the form submit button --> 
-						<div class="float-right"><a class="btn btn-success btn-lg" href="cars_response.php">Next</a></div><br>
+					<div class="row"><!-- row -->
+							<div class="col-sm"><!-- Column 1-->
+									
+									<h1 class="mt-4">So, here's an easy game to start with, it's called Cars:</h1>
+								  
+									<h2>If you were to compare your organisation to a kind of vehicle, which of these would you choose:</h2>
+									
+											<form><!-- start of form -->
+											
+													<div class="form-check form-control-lg">
+														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+														  <label class="form-check-label" for="exampleRadios1">
+															Formula 1 car
+														  </label>
+													</div>
+													
+													<div class="form-check form-control-lg">
+														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+														  <label class="form-check-label" for="exampleRadios2">
+															Family Wagon
+														  </label>
+													</div>
+													
+													<div class="form-check form-control-lg">
+														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+														  <label class="form-check-label" for="exampleRadios3">
+															Four Wheel Drive
+														  </label>
+													</div>
+													
+													<div class="form-check form-control-lg">
+														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option4">
+														  <label class="form-check-label" for="exampleRadios4">
+															Limousine
+														  </label>
+													</div>
+													
+													<div class="float-right"><a class="btn btn-success btn-lg" href="cars_response.php">Next</a></div><br>
+													
+											 </form> <!-- End of form -->
+											 
+							 </div><!-- End of Column 1 -->
+							 
+							 <div class="col-sm"><!-- Column 2 -->
+								<div class="text-center">
+									<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
+								</div>
+							</div><!-- End of column 2 -->
+						  
+							
+					</div><!-- End of row -->
 			
-			</div>
+			</div><!-- End of container -->
 	
 	
 	
