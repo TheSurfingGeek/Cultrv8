@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Question 3- Anchors & Oars</title>
+    <title>Question 3- Anchors & Oars Response</title>
   </head>
   
   <body>
@@ -27,11 +27,11 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="cars_response.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="anchors_oars.php">Back <span class="sr-only">(current)</span></a>
 										
 									  </li>
 									  <li class="nav-item">
-										<a class="btn btn-success btn-lg" href="anchors_oars_response.php">Next</a>
+										<a class="btn btn-success btn-lg" href="#">Next</a>
 										
 									  </li>
 									</ul>
@@ -48,9 +48,9 @@
 						
 						<div class="col-sm"><!-- Column 1 -->
 					
-							  <h1 class="mt-4">OK, ready for the next game? This one's called Anchors and Oars.</h1>
-							  <h2>For you non nautical types, all you need to know is that Anchors hold us back, and Oars propel us forwards - got it?</h2>
-							  <h2>What do you see are the cultural anchors and oars for your organisation?</h2>
+							  <h1 class="mt-4">Love your work! I thought I was deep, but you are waaaay deeper! </h1>
+							  <h2>So I'm curious, what is the most important anchor to fix, and what is the most important oar to strengthen from your list? And which theme category would you attach these to?</h2>
+							  
 							  
 						
 						</div><!-- End of column 1-->
@@ -68,38 +68,47 @@
 				<div class="row"><!-- Start of row 2 -->
 				
 					<div class="col"><!-- Form column -->
-						<form>
-									<div class="row">
+							<form>
+									<div class="row"><!-- Row 1 -->
 										<div class="col">
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anchors">
 										</div>
 									 
 										<div class="col">
-											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="1">
+											<div class="form-group">
+													<!-- <label for="exampleFormControlSelect1">Example select</label>-->
+													<select class="form-control" id="exampleFormControlSelect1">
+													  <option>Theme</option>
+													  <option>2</option>
+													  <option>3</option>
+													  <option>4</option>
+													  <option>5</option>
+													</select>
+											</div>
 										</div>
-									</div>	
+									</div><!-- End of row 1 -->
 									
-									<div class="row">
+									<div class="row"><!-- Row 2 -->
 										<div class="col">
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="2">
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Oars">
 										</div>
 									 
 										<div class="col">
-											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="2">
+											<div class="form-group">
+													<!-- <label for="exampleFormControlSelect1">Example select</label>-->
+													<select class="form-control" id="exampleFormControlSelect1">
+													  <option>Theme</option>
+													  <option>2</option>
+													  <option>3</option>
+													  <option>4</option>
+													  <option>5</option>
+													</select>
+											</div>
 										</div>
-									</div>	
+									</div><!-- End of row 2 -->
 									
-									<div class="row">
-										<div class="col">
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="3">
-										</div>
-									 
-										<div class="col">
-											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="3">
-										</div>
-									</div>	
 									
-									<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars_response.php">Next</a></div>
+									<div class="float-right"><a class="btn btn-success btn-lg" href="#">Next</a></div>
 										
 							</form>
 					</div><!-- End of form column -->
