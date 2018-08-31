@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Question 3- Anchors & Oars Response</title>
+    <title>Share Results</title>
   </head>
   
   <body>
@@ -27,11 +27,11 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="anchors_oars.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="anchors_oars_response.php">Back <span class="sr-only">(current)</span></a>
 										
 									  </li>
 									  <li class="nav-item">
-										<a class="btn btn-success btn-lg" href="share_results.php">Next</a>
+										<a class="btn btn-success btn-lg" href="#">Next</a>
 										
 									  </li>
 									</ul>
@@ -48,11 +48,9 @@
 						
 						<div class="col-sm"><!-- Column 1 -->
 					
-							  <h1 class="mt-4">Love your work! I thought I was deep, but you are waaaay deeper! </h1>
-							  <h2>So I'm curious, what is the most important anchor to fix, and what is the most important oar to strengthen from your list? And which theme category would you attach these to?</h2>
+							  <h1 class="mt-4">So how do you reckon others have done in this game? Want to find out what others say?</h1>
+							  <h2>Well, i'll share the results, but i need one more thing from you - a name!</h2>
 							  
-							  
-						
 						</div><!-- End of column 1-->
 						
 						<div class="col-sm"><!-- Column 2 -->
@@ -60,68 +58,47 @@
 								<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
 							</div>
 						</div><!-- End of column 2 -->
-						  
-						  
-				</div><!-- end of row --->
+						    
+				</div><!-- end of row 1 --->
+				
+				<div class="row"><!-- Start of row 2 -->
+					<div class="col-sm"><!-- Start of column 1 -->
+				
+							  <p>Nope, i'm not asking you to dob in any of your mates for stealing a paper clip or taking an extra 5 mins for lunch! </p>
+								
+							  <p>What i'd love to know is who do you reckon is someone in the organisation that personifies what this place is about - kind of a cultural role model. And what would you say is the value that they represent?</p>
+
+							 <p>They will get a recognition for this, and am sure will be rapt!</p>
+					</div><!-- End of column 1-->
+				</div><!-- End of row 2 -->
 					  
 					
-				<div class="row"><!-- Start of row 2 -->
+				<div class="row"><!-- Start of row 3 -->
 				
 					<div class="col"><!-- Form column -->
 							<form>
 									<div class="row"><!-- Row 1 -->
 										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anchors">
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
 										</div>
 									 
 										<div class="col">
-											<div class="form-group">
-													<!-- <label for="exampleFormControlSelect1">Example select</label>-->
-													<select class="form-control" id="exampleFormControlSelect1">
-													  <option>Theme</option>
-													  <option>2</option>
-													  <option>3</option>
-													  <option>4</option>
-													  <option>5</option>
-													</select>
-											</div>
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+										</div>
+										
+										<div class="col">
+											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Value">
 										</div>
 									</div><!-- End of row 1 -->
 									
-									<div class="row"><!-- Row 2 -->
-										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Oars">
-										</div>
-									 
-										<div class="col">
-											<div class="form-group">
-													<!-- <label for="exampleFormControlSelect1">Example select</label>-->
-													<select class="form-control" id="exampleFormControlSelect1">
-													  <option>Theme</option>
-													  <option>2</option>
-													  <option>3</option>
-													  <option>4</option>
-													  <option>5</option>
-													</select>
-											</div>
-										</div>
-									</div><!-- End of row 2 -->
-									
-									
-									<div class="float-right"><a class="btn btn-success btn-lg" href="share_results.php">Next</a></div>
-										
+									<div class="float-right"><a class="btn btn-success btn-lg" href="#">Next</a></div>		
 							</form>
 					</div><!-- End of form column -->
 						
-				</div><!-- end of row 2 -->
+				</div><!-- end of row 3 -->
 				
 			</div><!-- End of the container -->
 			
-			
-	
-	
-	
-	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
