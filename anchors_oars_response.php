@@ -49,7 +49,7 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">Love your work! I thought I was deep, but you are waaaay deeper! </h1>
-							  <h2>So I'm curious, what is the most important anchor to fix, and what is the most important oar to strengthen from your list? And which theme category would you attach these to?</h2>
+							  <p>So I'm curious, what is the most important anchor to fix, and what is the most important oar to strengthen from your list? And which theme category would you attach these to?</p>
 							  
 							  
 						

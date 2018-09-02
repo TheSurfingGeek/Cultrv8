@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Share Results</title>
+    <title>Next Steps</title>
   </head>
   
   <body>
@@ -27,11 +27,11 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="anchors_oars_response.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="join_movement.php">Back <span class="sr-only">(current)</span></a>
 										
 									  </li>
 									  <li class="nav-item">
-										<a class="btn btn-success btn-lg" href="results_summary.php">Next</a>
+										<a class="btn btn-success btn-lg" href="#">Next</a>
 										
 									  </li>
 									</ul>
@@ -48,8 +48,20 @@
 						
 						<div class="col-sm"><!-- Column 1 -->
 					
-							  <h1 class="mt-4">So how do you reckon others have done in this game? Want to find out what others say?</h1>
-							  <h2>Well, i'll share the results, but i need one more thing from you - a name!</h2>
+							  <h1 class="mt-4">Hey well done you!</h1>
+							  <p>We can all have opinions eh, but it's someone special that finds solutions, so big congrats! </p>
+							  
+							  <p>So i'm going to help you with next steps:
+									1 - Find a problem to solve
+									2 - Find some people to solve it with
+									3 - Name experiment and success statement
+									4 - Experiment</p>
+							  
+							  <p>The key thing here is this is about learning, trying some stuff to make things better, having fun. It shouldn't be onerous or significantly time consuming. </p>
+							  
+							  <p>Right, it's time to come out of your shell - submit your name and lets get going!</p>
+							  
+							 
 							  
 						</div><!-- End of column 1-->
 						
@@ -64,36 +76,16 @@
 				<div class="row"><!-- Start of row 2 -->
 					<div class="col-sm"><!-- Start of column 1 -->
 				
-							  <p>Nope, i'm not asking you to dob in any of your mates for stealing a paper clip or taking an extra 5 mins for lunch! </p>
-								
-							  <p>What i'd love to know is who do you reckon is someone in the organisation that personifies what this place is about - kind of a cultural role model. And what would you say is the value that they represent?</p>
-
-							 <p>They will get a recognition for this, and am sure will be rapt!</p>
+						<a class="btn btn-success btn-lg" href="#">Join the movement</a>
+						<a class="btn btn-success btn-lg" href="index.php">No thanks</a>
+						
 					</div><!-- End of column 1-->
+					
 				</div><!-- End of row 2 -->
 					  
 					
 				<div class="row"><!-- Start of row 3 -->
 				
-					<div class="col"><!-- Form column -->
-							<form>
-									<div class="row"><!-- Row 1 -->
-										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
-										</div>
-									 
-										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-										</div>
-										
-										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Value">
-										</div>
-									</div><!-- End of row 1 -->
-									
-									<div class="float-right"><a class="btn btn-success btn-lg" href="results_summary.php">Next</a></div>		
-							</form>
-					</div><!-- End of form column -->
 						
 				</div><!-- end of row 3 -->
 				

@@ -45,11 +45,11 @@
 				<div class="row"><!-- Start of row 1 -->
 					<div class="col-sm"><!-- Column 1 -->
 			
-						<h1 class="mt-4">Hey, nice job! You chose "Four Wheel Drive"
+						<h1 class="mt-4">Hey, nice job! You chose "Four Wheel Drive"</h1>
 
-						<h2>Here's a list of words associated with this choice - what do you think of these? Agree/disagree? </h2>
+						<p>Here's a list of words associated with this choice - what do you think of these? Agree/disagree? </p>
 
-						<h2>What other words would you use to describe your choice, and your organisation?</h2>
+						<p>What other words would you use to describe your choice, and your organisation?</p>
 						
 						
 					</div><!-- End of column 1-->
