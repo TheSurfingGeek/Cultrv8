@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Next Steps</title>
+    <title>3 - Name Experiment</title>
   </head>
   
   <body>
@@ -27,10 +27,9 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="join_movement.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="find_people.php">Back <span class="sr-only">(current)</span></a>
 										
 									  </li>
-
 									</ul>
 								</div>
 			</nav>
@@ -45,24 +44,14 @@
 						
 						<div class="col-sm"><!-- Column 1 -->
 					
-							  <h1 class="mt-4">Hey well done you!</h1>
-							  <p>We can all have opinions eh, but it's someone special that finds solutions, so big congrats! </p>
+							  <h1 class="mt-4">3 - Name Experiment</h1>
+							  <h3>Awesome work!</h3>
 							  
-								<p>So i'm going to help you with next steps:
-									<ul>
-										<li>1 - Find a problem to solve</li>
-										<li>2 - Find some people to solve it with</li>
-										<li>3 - Name experiment and success statement</li>
-										<li>4 - Experiment</li>
-									</ul>
-								</p>
+							  <p>You have now formed a hit team with "name" and "name"</p>
 							  
-							  <p>The key thing here is this is about learning, trying some stuff to make things better, having fun. It shouldn't be onerous or significantly time consuming. </p>
-							  
-							  <p>Right, it's time to come out of your shell - submit your name and lets get going!</p>
-							  
-							 
-							  
+							  <p>Your first job is to meet and agree a name for your experiment, and develop a success statement for it:</p>
+
+							   
 						</div><!-- End of column 1-->
 						
 						<div class="col-sm"><!-- Column 2 -->
@@ -74,21 +63,20 @@
 				</div><!-- end of row 1 --->
 				
 				<div class="row"><!-- Start of row 2 -->
-					<!-- <div class="col-sm"><!-- Start of column 1 -->
-									
-							<form class="form-inline">
+					
+					<form>
 
-								<div class="col-8">
-									<input type="text" class="form-control mb-2 mr-sm-2" id="inputName" placeholder="Name">
-								</div>
-								
-								<div class="col">
-									<a class="btn btn-success btn-lg" href="find_problem.php">Next</a>
-								  <!-- Use this when code is in place <button type="submit" class="btn btn-success mb-2">Submit</button> --> 
-								</div>
-							</form>
-							
-					<!-- </div><!-- End of column 1-->
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Experiment Name>
+							</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						</div>
+						  <button type="submit" class="btn btn-success mb-2">Submit</button>
+
+					</form>
 					
 				</div><!-- End of row 2 -->
 					  

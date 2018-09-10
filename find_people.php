@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Next Steps</title>
+    <title>2 - Find People</title>
   </head>
   
   <body>
@@ -27,10 +27,9 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="join_movement.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="find_problem.php">Back <span class="sr-only">(current)</span></a>
 										
 									  </li>
-
 									</ul>
 								</div>
 			</nav>
@@ -45,24 +44,15 @@
 						
 						<div class="col-sm"><!-- Column 1 -->
 					
-							  <h1 class="mt-4">Hey well done you!</h1>
-							  <p>We can all have opinions eh, but it's someone special that finds solutions, so big congrats! </p>
+							  <h1 class="mt-4">2 - Find People</h1>
+							  <h3>Well done!</h3>
 							  
-								<p>So i'm going to help you with next steps:
-									<ul>
-										<li>1 - Find a problem to solve</li>
-										<li>2 - Find some people to solve it with</li>
-										<li>3 - Name experiment and success statement</li>
-										<li>4 - Experiment</li>
-									</ul>
-								</p>
+							  <p>You have chosen <strong>"Bad communication"</strong> as your problem</p>
 							  
-							  <p>The key thing here is this is about learning, trying some stuff to make things better, having fun. It shouldn't be onerous or significantly time consuming. </p>
-							  
-							  <p>Right, it's time to come out of your shell - submit your name and lets get going!</p>
-							  
-							 
-							  
+							  <p>You now need to form a hit team of around 3 people to deal with this. The people in the following dropdown list have also expressed an interest in this problem, or you can nominate people not in the list who could be good in your hit team!</p>
+									
+							  <p>Once you have identified 2 others, press submit and an automated email will invite them to form a team</p>
+							   
 						</div><!-- End of column 1-->
 						
 						<div class="col-sm"><!-- Column 2 -->
@@ -74,21 +64,23 @@
 				</div><!-- end of row 1 --->
 				
 				<div class="row"><!-- Start of row 2 -->
-					<!-- <div class="col-sm"><!-- Start of column 1 -->
-									
-							<form class="form-inline">
+					<form class="form-inline">
 
-								<div class="col-8">
-									<input type="text" class="form-control mb-2 mr-sm-2" id="inputName" placeholder="Name">
+								<div class="col">
+													<select class="form-control mb-2" id="exampleFormControlSelect1">
+													  <option>Peoples names</option>
+													  <option>Name 1</option>
+													  <option>Name 2</option>
+													  <option>Name 3</option>
+													  <option>Name 4</option>
+													</select>
 								</div>
 								
 								<div class="col">
-									<a class="btn btn-success btn-lg" href="find_problem.php">Next</a>
-								  <!-- Use this when code is in place <button type="submit" class="btn btn-success mb-2">Submit</button> --> 
+								<a class="btn btn-success btn-lg" href="name_experiment.php">Next</a>
+								  <!-- use this once code is in place <button type="submit" class="btn btn-success mb-2">Submit</button> -->
 								</div>
 							</form>
-							
-					<!-- </div><!-- End of column 1-->
 					
 				</div><!-- End of row 2 -->
 					  
