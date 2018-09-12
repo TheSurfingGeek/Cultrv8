@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>3 - Name Experiment</title>
+    <title>4 - Experiment</title>
   </head>
   
   <body>
@@ -27,8 +27,10 @@
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
 									  <li class="nav-item active">
-										<a class="btn btn-success btn-lg" href="find_people.php">Back <span class="sr-only">(current)</span></a>
-										
+										<a class="btn btn-success btn-lg" href="name_experiment.php">Back <span class="sr-only">(current)</span></a>
+									  </li>
+									    <li class="nav-item">
+										<a class="btn btn-success btn-lg" href="share_results.php">Next</a>
 									  </li>
 									</ul>
 								</div>
@@ -44,13 +46,15 @@
 						
 						<div class="col-sm"><!-- Column 1 -->
 					
-							  <h1 class="mt-4">3 - Name Experiment</h1>
-							  <h3>Awesome work!</h3>
+							  <h1 class="mt-4">4 - Experiment</h1>
+							  <h3>Okay you're good to go!</h3>
 							  
-							  <p>You have now formed a hit team with "name" and "name"</p>
+							  <p>You've got a problem, a team, and a goal, so what are you waiting for?!</p>
 							  
-							  <p>Your first job is to meet and agree a name for your experiment, and develop a success statement for it:</p>
-
+							  <p>This next bit is about fun, collaboration, trying some stuff out and learning.</p>
+							  
+							  <p>I'd love to hear how you get on, so use this platform to share how you get on - its super easy and you can use photo's, words, or any other medium you like to share any highlights. And you can also see how others are going too - who knows, there may be other teams addressing a similar problem to you, or with a solution that resonates for your problem!</p>
+ 
 							   
 						</div><!-- End of column 1-->
 						
@@ -63,22 +67,6 @@
 				</div><!-- end of row 1 --->
 				
 				<div class="row"><!-- Start of row 2 -->
-					
-					<form>
-
-						<div class="form-group">
-							<label for="exampleInputEmail1">Experiment</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter experiment Name">
-							</div>
-						
-						<div class="form-group">
-							<label for="exampleFormControlTextarea1">Success Statement</label>
-							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter success statement here..."></textarea>
-						</div>
-						 	<a class="btn btn-success btn-lg" href="experiment.php">Submit</a>
-							<!-- Use this once code is in place <button type="submit" class="btn btn-success mb-2">Submit</button> -->
-
-					</form>
 					
 				</div><!-- End of row 2 -->
 					  
