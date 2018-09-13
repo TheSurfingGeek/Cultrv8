@@ -14,7 +14,7 @@
   <body>
 	
 	<!-- NAV  BAR ------------------------------------------------------------>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="navbar navbar-expand-lg navbar-light">
 				  <a class="navbar-brand" href="index.php">
 					<img src="img/Cultrv8_logo.jpg" width="250" height="179" class="d-inline-block align-top" alt="">
 				  </a>
@@ -26,13 +26,13 @@
 			  
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
-									  <li class="nav-item active">
+									  
+									  <li class="nav-item ml-4 mr-2">
 										<a class="btn btn-success btn-lg" href="cars.php">Back <span class="sr-only">(current)</span></a>
-										
 									  </li>
-									  <li class="nav-item">
+									  
+									  <li class="nav-item ml-4 mr-2">
 										<a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a>
-										
 									  </li>
 									</ul>
 								</div>

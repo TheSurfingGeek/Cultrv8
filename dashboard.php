@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>4 - Experiment</title>
+    <title>Our Dashboard</title>
   </head>
   
   <body>
@@ -28,11 +28,11 @@
 									<ul class="navbar-nav">
 									  
 									  <li class="nav-item ml-4 mr-2">
-										<a class="btn btn-success btn-lg" href="name_experiment.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="experiment.php">Back <span class="sr-only">(current)</span></a>
 									  </li>
 									  
 									  <li class="nav-item ml-4 mr-2">
-										<a class="btn btn-success btn-lg" href="dashboard.php">Next</a>
+										<a class="btn btn-success btn-lg" href="organisation_dashboard.php">Next</a>
 									  </li>
 									  
 									</ul>
@@ -49,14 +49,8 @@
 						
 						<div class="col-sm"><!-- Column 1 -->
 					
-							  <h1 class="mt-4">4 - Experiment</h1>
-							  <h3>Okay you're good to go!</h3>
+							  <h1 class="mt-4">Our Dashboard</h1>
 							  
-							  <p>You've got a problem, a team, and a goal, so what are you waiting for?!</p>
-							  
-							  <p>This next bit is about fun, collaboration, trying some stuff out and learning.</p>
-							  
-							  <p>I'd love to hear how you get on, so use this platform to share how you get on - its super easy and you can use photo's, words, or any other medium you like to share any highlights. And you can also see how others are going too - who knows, there may be other teams addressing a similar problem to you, or with a solution that resonates for your problem!</p>
  
 							   
 						</div><!-- End of column 1-->
