@@ -61,7 +61,7 @@
 								</div>
 								
 								<div class="col">
-								  <a class="btn btn-success btn-lg" href="find_people.php">Next</a>
+								  <a class="btn btn-success btn-lg" href="find_people.php">Submit</a>
 								  <!-- use this once code is in place <button type="submit" class="btn btn-success mb-2">Submit</button> -->
 								</div>
 							</form>

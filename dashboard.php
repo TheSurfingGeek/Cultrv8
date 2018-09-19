@@ -63,15 +63,38 @@
 						    
 				</div><!-- end of row 1 --->
 				
-				<div class="row"><!-- Start of row 2 -->
-					
-				</div><!-- End of row 2 -->
-					  
-					
-				<div class="row"><!-- Start of row 3 -->
-				
+					<div class="row"><!-- ROW 2 -->
+							<div class="col-7 border border-dark">
+							   <p class="font-weight-bold">Problem</p>
+							  
+							</div><!-- End of column 1 -->
 						
-				</div><!-- end of row 3 -->
+							<div class="col-5 border border-dark">
+							   <p class="font-weight-bold">Experiment Name</p>
+							</div><!-- End of column 2 -->
+						
+					</div><!-- End of row 2 -->
+					  
+					<div class="row"><!-- ROW 3 -->
+							<div class="col-5 border border-dark">
+							   <p class="font-weight-bold">Team Members</p>
+							</div><!-- End of column 1 -->
+						
+							<div class="col-7 border border-dark">
+							   <p class="font-weight-bold">Success Statement</p>
+							</div><!-- End of column 2 -->
+					</div><!-- end of row 3 -->
+				
+					<div class="row"><!-- ROW 4 -->
+							<div class="col-8 border border-dark">
+							   <p class="font-weight-bold">Expierment Updates</p>
+							</div><!-- End of column 1 -->
+						
+							<div class="col-4 border border-dark">
+							   <p class="font-weight-bold">Progress Indicator</p>
+							</div><!-- End of column 2 -->
+					</div><!-- end of row 4 --> 
+				
 				
 			</div><!-- End of the container -->
 			

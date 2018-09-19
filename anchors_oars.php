@@ -71,21 +71,29 @@
 						<form>
 									<div class="row">
 										<div class="col">
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
+											<div class="form-group">
+												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
+											</div>
 										</div>
 									 
 										<div class="col">
-											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="1">
+											<div class="form-group">
+												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="1">
+											</div>
 										</div>
 									</div>	
 									
 									<div class="row">
 										<div class="col">
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="2">
+											<div class="form-group">
+												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="2">
+											</div>
 										</div>
 									 
 										<div class="col">
-											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="2">
+											<div class="form-group">
+												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="2">
+											</div>
 										</div>
 									</div>	
 									
@@ -95,11 +103,14 @@
 										</div>
 									 
 										<div class="col">
-											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="3">
+											<div class="form-group">
+												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="3">
+											</div>
 										</div>
 									</div>	
 									
 									<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars_response.php">Next</a></div>
+						
 										
 							</form>
 					</div><!-- End of form column -->

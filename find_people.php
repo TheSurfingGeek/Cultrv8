@@ -78,7 +78,7 @@
 								</div>
 								
 								<div class="col">
-								<a class="btn btn-success btn-lg" href="name_experiment.php">Next</a>
+								<a class="btn btn-success btn-lg" href="name_experiment.php">Submit</a>
 								  <!-- use this once code is in place <button type="submit" class="btn btn-success mb-2">Submit</button> -->
 								</div>
 							</form>

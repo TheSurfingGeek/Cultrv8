@@ -87,7 +87,9 @@
 										</div>
 										
 										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Value">
+											<div class="form-group">
+												<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Value">
+											</div>
 										</div>
 									</div><!-- End of row 1 -->
 									
