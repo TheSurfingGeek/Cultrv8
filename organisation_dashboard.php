@@ -28,11 +28,11 @@
 									<ul class="navbar-nav">
 									  
 									  <li class="nav-item ml-4 mr-2">
-										<a class="btn btn-success btn-lg" href="dashbaord.php">Back <span class="sr-only">(current)</span></a>
+										<a class="btn btn-success btn-lg" href="dashboard.php">Back <span class="sr-only">(current)</span></a>
 									  </li>
 									  
 									  <li class="nav-item ml-4 mr-2">
-										<a class="btn btn-success btn-lg" href="share_results.php">Wanna join the movement?</a>
+										<a class="btn btn-success btn-lg" href="next_steps.php">Wanna join the movement?</a>
 									  </li>
 									  
 									</ul>
@@ -50,28 +50,36 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">Organisation Dashboard</h1>
-							  
- 
-							   
+							 	   
 						</div><!-- End of column 1-->
-						
-						<div class="col-sm"><!-- Column 2 -->
-							<div class="text-center">
-								<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
-							</div>
-						</div><!-- End of column 2 -->
 						    
 				</div><!-- end of row 1 --->
 				
 				<div class="row"><!-- Start of row 2 -->
-					
-				</div><!-- End of row 2 -->
-					  
-					
-				<div class="row"><!-- Start of row 3 -->
 				
+						<div class="col border border-dark">
+							   <p class="font-weight-bold">Success Stories</p>
+						</div><!-- End of column 1 -->
 						
-				</div><!-- end of row 3 -->
+						<div class="col ml-1 border border-dark">
+							   <p class="font-weight-bold">Experiment #'s</p>
+						</div><!-- End of column 2 -->
+						
+						<div class="col ml-1">
+							<div class ="row mb-2 border border-dark">
+							  <div class="col">
+							   <p class="font-weight-bold">Experiment names</p>
+							  </div>
+							</div>
+							<div class="row border border-dark">
+							   <div class="col">
+								<p class="font-weight-bold">Progress Indicator</p>
+							  </div>
+							</div>
+						</div><!-- End of column 3 -->
+						
+				
+				</div><!-- End of row 2 -->
 				
 			</div><!-- End of the container -->
 			
