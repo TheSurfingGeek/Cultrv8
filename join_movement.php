@@ -46,11 +46,11 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">Okay that was interesting eh!</h1>
-							  <p>Now your usual crab would at this stage say "that's interesting", but then scuttle away into their shell to mind their own business. </p>
+							  <h4>Now your usual crab would at this stage say "that's interesting", but then scuttle away into their shell to mind their own business. </h4>
 							  
-							  <p>But I ain't no usual crab, i like fixing stuff, and i especially LOVE trying new things. And i reckon you might be a bit like that too.</p>
+							  <h4>But I ain't no usual crab, i like fixing stuff, and i especially LOVE trying new things. And i reckon you might be a bit like that too.</h4>
 							  
-							  <p>So to try some cool, new, innovative things to get this boat going faster, experiment a bit and have some fun with other cool crabs, click this button.</p>
+							  <h4>So to try some cool, new, innovative things to get this boat going faster, experiment a bit and have some fun with other cool crabs, click this button.</h4>
 							  
 						</div><!-- End of column 1-->
 						

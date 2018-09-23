@@ -49,7 +49,7 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">Love your work! I thought I was deep, but you are waaaay deeper! </h1>
-							  <p>So I'm curious, what is the most important anchor to fix, and what is the most important oar to strengthen from your list? And which theme category would you attach these to?</p>
+							  <h3>So I'm curious, what is the most important anchor to fix, and what is the most important oar to strengthen from your list? And which theme category would you attach these to?</h3>
 							  
 							  
 						
@@ -71,13 +71,16 @@
 							<form>
 									<div class="row"><!-- Row 1 -->
 										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anchors">
+										   <div class="form-group">
+											<label for="AnchorReponse1" class="form-control-lg">Anchor</label>
+											<input type="text" class="form-control border-secondary" id="AnchorReponse1" aria-describedby="emailHelp" placeholder="Enter most important anchor to fix">
+										   </div>	
 										</div>
 									 
 										<div class="col">
 											<div class="form-group">
-													<!-- <label for="exampleFormControlSelect1">Example select</label>-->
-													<select class="form-control" id="exampleFormControlSelect1">
+													<label for="exampleFormControlSelect1" class="form-control-lg">Select theme category</label>
+													<select class="form-control border-secondary" id="exampleFormControlSelect1">
 													  <option>Theme</option>
 													  <option>2</option>
 													  <option>3</option>
@@ -90,13 +93,16 @@
 									
 									<div class="row"><!-- Row 2 -->
 										<div class="col">
-											<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Oars">
+											<div class="form-group">
+												<label for="OarResponse1" class="form-control-lg">Oar</label>
+												<input type="text" class="form-control border-primary" id="OarResponse1" aria-describedby="emailHelp" placeholder="Enter most important Oar to fix">
+											</div>
 										</div>
 									 
 										<div class="col">
 											<div class="form-group">
-													<!-- <label for="exampleFormControlSelect1">Example select</label>-->
-													<select class="form-control" id="exampleFormControlSelect1">
+													<label for="exampleFormControlSelect1" class="form-control-lg">Select theme category</label>
+													<select class="form-control border-primary" id="exampleFormControlSelect1">
 													  <option>Theme</option>
 													  <option>2</option>
 													  <option>3</option>

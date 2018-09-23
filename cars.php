@@ -48,7 +48,7 @@
 									
 									<h1 class="mt-4">So, here's an easy game to start with, it's called Cars:</h1>
 								  
-									<p>If you were to compare your organisation to a kind of vehicle, which of these would you choose:</p>
+									<h3>If you were to compare your organisation to a kind of vehicle, which of these would you choose:</h3>
 									
 											<form><!-- start of form -->
 											

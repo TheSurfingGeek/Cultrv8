@@ -47,7 +47,18 @@
 							  <p>Have a look at the drop down list below and find a problem theme that resonates with you</p>
 							  
 							  <p>Select the problem and press submit</p>
-									
+									   
+						</div><!-- End of column 1-->
+						
+						<div class="col-sm"><!-- Column 2 -->
+							<div class="text-center">
+								<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
+							</div>
+						</div><!-- End of column 2 -->
+						    
+				</div><!-- end of row 1 --->
+				
+				<div class="row"><!-- Start of row 2 -->
 							<form class="form-inline">
 
 								<div class="col">
@@ -65,19 +76,6 @@
 								  <!-- use this once code is in place <button type="submit" class="btn btn-success mb-2">Submit</button> -->
 								</div>
 							</form>
-							   
-						</div><!-- End of column 1-->
-						
-						<div class="col-sm"><!-- Column 2 -->
-							<div class="text-center">
-								<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
-							</div>
-						</div><!-- End of column 2 -->
-						    
-				</div><!-- end of row 1 --->
-				
-				<div class="row"><!-- Start of row 2 -->
-				
 					
 				</div><!-- End of row 2 -->
 					  

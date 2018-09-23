@@ -46,7 +46,7 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">Hey well done you!</h1>
-							  <p>We can all have opinions eh, but it's someone special that finds solutions, so big congrats! </p>
+							  <h4>We can all have opinions eh, but it's someone special that finds solutions, so big congrats! </h4>
 							  
 								<p>So i'm going to help you with next steps:
 									<ul>

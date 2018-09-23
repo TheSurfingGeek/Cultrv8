@@ -47,11 +47,8 @@
 			
 						<h1 class="mt-4">Hey, nice job! You chose "Four Wheel Drive"</h1>
 
-						<p>Here's a list of words associated with this choice - what do you think of these? Agree/disagree? </p>
+						<h3>Here's a list of words associated with this choice - what do you think of these? Agree/disagree? </h3>
 
-						<p>What other words would you use to describe your choice, and your organisation?</p>
-						
-						
 					</div><!-- End of column 1-->
 						
 					<div class="col-sm"><!-- Column 2 -->
@@ -61,6 +58,7 @@
 					</div><!-- End of column 2 -->
 					
 				</div><!-- end of row --->
+				
 				
 				<div class="row"><!-- Start of row 2 -->
 				
@@ -82,7 +80,7 @@
 									</div>
 									
 									<div class="col">
-										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+										<input type="text" class="form-control" id="EnteredWord1" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->		
 									
@@ -104,7 +102,7 @@
 									</div>
 							  
 									<div class="col">
-										<input type="text" class="form-control" id="exampleInputPassword2" placeholder="">
+										<input type="text" class="form-control" id="EnteredWord2" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 							
@@ -125,7 +123,7 @@
 									</div>
 									
 									<div class="col">
-										<input type="text" class="form-control" id="exampleInputPassword3" placeholder="">
+										<input type="text" class="form-control" id="EnteredWord3" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 									
@@ -147,7 +145,7 @@
 									</div>
 									
 									<div class="col">
-										<input type="text" class="form-control" id="exampleInputPassword4" placeholder="">
+										<input type="text" class="form-control" id="EnteredWord4" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 									
@@ -168,7 +166,7 @@
 									</div>
 									
 									<div class="col">
-										<input type="text" class="form-control" id="exampleInputPassword5" placeholder="">
+										<input type="text" class="form-control" id="EnteredWord5" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 							

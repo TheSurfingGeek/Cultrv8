@@ -64,11 +64,11 @@
 				<div class="row"><!-- Start of row 2 -->
 					<div class="col-sm"><!-- Start of column 1 -->
 				
-							  <p>Nope, i'm not asking you to dob in any of your mates for stealing a paper clip or taking an extra 5 mins for lunch! </p>
+							  <h3>Nope, i'm not asking you to dob in any of your mates for stealing a paper clip or taking an extra 5 mins for lunch! </h3>
 								
-							  <p>What i'd love to know is who do you reckon is someone in the organisation that personifies what this place is about - kind of a cultural role model. And what would you say is the value that they represent?</p>
+							  <h3>What i'd love to know is who do you reckon is someone in the organisation that personifies what this place is about - kind of a cultural role model. And what would you say is the value that they represent?</h3>
 
-							 <p>They will get a recognition for this, and am sure will be rapt!</p>
+							 <h3>They will get a recognition for this, and am sure will be rapt!</h3>
 					</div><!-- End of column 1-->
 				</div><!-- End of row 2 -->
 					  

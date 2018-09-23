@@ -49,8 +49,8 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">OK, ready for the next game? This one's called Anchors and Oars.</h1>
-							  <p>For you non nautical types, all you need to know is that Anchors hold us back, and Oars propel us forwards - got it?</p>
-							  <p>What do you see are the cultural anchors and oars for your organisation?</p>
+							  <h3>For you non nautical types, all you need to know is that Anchors hold us back, and Oars propel us forwards - got it?</h3>
+							  <h3>What do you see are the cultural anchors and oars for your organisation?</h3>
 							  
 						
 						</div><!-- End of column 1-->
@@ -72,13 +72,15 @@
 									<div class="row">
 										<div class="col">
 											<div class="form-group">
-												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
+												<label for="OarEntry1" class="form-control-lg">Oar Entries</label>
+												<input type="text" class="form-control border-primary" id="OarEntry1" aria-describedby="emailHelp" placeholder="Oar entry 1">
 											</div>
 										</div>
 									 
 										<div class="col">
 											<div class="form-group">
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="1">
+												<label for="OarEntry1" class="form-control-lg">Anchor Entries</label>
+												<input type="text" class="form-control border-secondary" id="AnchorEntry1" placeholder="Anchor entry 1">
 											</div>
 										</div>
 									</div>	
@@ -86,25 +88,25 @@
 									<div class="row">
 										<div class="col">
 											<div class="form-group">
-												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="2">
+												<input type="text" class="form-control border-primary" id="OarEntry2" aria-describedby="emailHelp" placeholder="Oar entry 2">
 											</div>
 										</div>
 									 
 										<div class="col">
 											<div class="form-group">
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="2">
+												<input type="text" class="form-control border-secondary" id="exampleInputPassword1" placeholder="Anchor entry 2">
 											</div>
 										</div>
 									</div>	
 									
 									<div class="row">
 										<div class="col">
-											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="3">
+											<input type="text" class="form-control border-primary" id="OarEntry3" aria-describedby="emailHelp" placeholder="Oar Entry 3">
 										</div>
 									 
 										<div class="col">
 											<div class="form-group">
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="3">
+												<input type="text" class="form-control border-secondary" id="exampleInputPassword1" placeholder="Anchor entry 3">
 											</div>
 										</div>
 									</div>	
