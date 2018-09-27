@@ -49,8 +49,8 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">OK, ready for the next game? This one's called Anchors and Oars.</h1>
-							  <h3>For you non nautical types, all you need to know is that Anchors hold us back, and Oars propel us forwards - got it?</h3>
-							  <h3>What do you see are the cultural anchors and oars for your organisation?</h3>
+							  <p>For you non nautical types, all you need to know is that Anchors hold us back, and Oars propel us forwards - got it?</p>
+							  <p>What do you see are the cultural anchors and oars for your organisation?</p>
 							  
 						
 						</div><!-- End of column 1-->

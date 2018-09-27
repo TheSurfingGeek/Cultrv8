@@ -49,7 +49,7 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">So how do you reckon others have done in this game? Want to find out what others say?</h1>
-							  <h2>Well, i'll share the results, but i need one more thing from you - a name!</h2>
+							  <h4>Well, i'll share the results, but i need one more thing from you - a name!</h4>
 							  
 						</div><!-- End of column 1-->
 						
@@ -64,11 +64,11 @@
 				<div class="row"><!-- Start of row 2 -->
 					<div class="col-sm"><!-- Start of column 1 -->
 				
-							  <h3>Nope, i'm not asking you to dob in any of your mates for stealing a paper clip or taking an extra 5 mins for lunch! </h3>
+							  <p>Nope, i'm not asking you to dob in any of your mates for stealing a paper clip or taking an extra 5 mins for lunch! </p>
 								
-							  <h3>What i'd love to know is who do you reckon is someone in the organisation that personifies what this place is about - kind of a cultural role model. And what would you say is the value that they represent?</h3>
+							  <p>What i'd love to know is who do you reckon is someone in the organisation that personifies what this place is about - kind of a cultural role model. And what would you say is the value that they represent?</p>
 
-							 <h3>They will get a recognition for this, and am sure will be rapt!</h3>
+							 <p>They will get a recognition for this, and am sure will be rapt!</p>
 					</div><!-- End of column 1-->
 				</div><!-- End of row 2 -->
 					  
