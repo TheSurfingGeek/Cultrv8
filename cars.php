@@ -53,6 +53,33 @@
 									
 											<form><!-- start of form -->
 											
+											
+										
+											   <?php
+												
+												//Connect to the database using the PDO conection method
+													require('./dbscripts/cultrv8_mysql_PDO_connect.php');  
+				
+												//Get user_id and first name
+													$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+					
+														$PDO_carNameQuery = $dbh->prepare("SELECT car_name FROM cultrv8_db.car_list
+																							 WHERE car_name_display = 1");
+															$PDO_carNameQuery->execute();
+																	$rowset = $PDO_carNameQuery->fetchAll(PDO::FETCH_NUM);
+																				if ($rowset) {
+																					foreach ($rowset as $row) {
+																						print '<option value="'.$row[0].'">'.$row[1].'</option>';
+																					}
+																				} else {  //No rowset was returned 
+																					print 'No Grades have been returned';
+																				}
+														//Release the PDO connection
+														$dbh = null;
+																 
+											 	?>
+											
+										
 													<div class="form-check form-control-lg">
 														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
 														  <label class="form-check-label" for="exampleRadios1">
