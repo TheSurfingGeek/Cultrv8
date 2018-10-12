@@ -1,3 +1,37 @@
+<?php
+    #----------------------------------------------------------------------------------------
+    # Car selection page
+	# Created 13/10/2018
+	#----------------------------------------------------------------------------------------
+	
+//Check if the form has been submitted
+	if (isset($_POST['submitted'])) {
+		
+		//Initialise errors array
+		  $errors = array();
+		
+		//Check for required fields
+		  if (empty($_POST['carSelectedInput'])) {
+				$errors[] = 'No car selection was made.';
+			 } else {
+				$carSelected = htmlspecialchars( strip_tags($_POST['carSelectedInput']) );
+			 }
+			 
+				if (empty($errors)) {   // No errors so sweet to carry on
+				     print '<p>The car selected was: </p>' .$carSelected;
+						//Now move to the next page and pass in the car selected value 
+					 
+					 
+					 
+				} else { // there was an error - display it
+				    print ' <div class="alert alert-danger" role="alert">
+							 Ops! No car selection was made. Please select a car to continue.
+					        </div>';
+				} //End of if (empty($errors))
+		
+	} //End of submit php
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,64 +85,45 @@
 								  
 									<h3>If you were to compare your organisation to a kind of vehicle, which of these would you choose:</h3>
 									
-											<form><!-- start of form -->
-											
-											
-										
+											<form action="cars.php" method="post"  id="carQuestion1"><!-- start of form -->
 											   <?php
 												
 												//Connect to the database using the PDO conection method
 													require('./dbscripts/cultrv8_mysql_PDO_connect.php');  
 				
-												//Get user_id and first name
+												//Query the car list and loop through the results 
 													$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
 					
-														$PDO_carNameQuery = $dbh->prepare("SELECT car_name FROM cultrv8_db.car_list
+														$PDO_carNameQuery = $dbh->prepare("SELECT car_list_id,car_name FROM cultrv8_db.car_list
 																							 WHERE car_name_display = 1");
 															$PDO_carNameQuery->execute();
 																	$rowset = $PDO_carNameQuery->fetchAll(PDO::FETCH_NUM);
 																				if ($rowset) {
 																					foreach ($rowset as $row) {
-																						print '<option value="'.$row[0].'">'.$row[1].'</option>';
+																						//Loop through the results and create the radio button list
+																								//TODDO: Increment class id
+																								print '<div class="form-check form-control-lg">
+																									<input class="form-check-input" type="radio" name="carSelectedInput" id="exampleRadios1" value="'.$row[0].'">
+																									<label class="form-check-label" for="exampleRadios1">
+																										'.$row[1].'
+																									</label>
+																								</div>';
 																					}
 																				} else {  //No rowset was returned 
-																					print 'No Grades have been returned';
+																					print ' <div class="alert alert-danger" role="alert">
+																								Ops! We have an issue getting a list of cars for you.
+																						    </div>';
 																				}
-														//Release the PDO connection
-														$dbh = null;
+													//Release the PDO connection
+													$dbh = null;
 																 
 											 	?>
-											
-										
-													<div class="form-check form-control-lg">
-														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-														  <label class="form-check-label" for="exampleRadios1">
-															Formula 1 car
-														  </label>
-													</div>
-													
-													<div class="form-check form-control-lg">
-														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-														  <label class="form-check-label" for="exampleRadios2">
-															Family Wagon
-														  </label>
-													</div>
-													
-													<div class="form-check form-control-lg">
-														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-														  <label class="form-check-label" for="exampleRadios3">
-															Four Wheel Drive
-														  </label>
-													</div>
-													
-													<div class="form-check form-control-lg">
-														  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option4">
-														  <label class="form-check-label" for="exampleRadios4">
-															Limousine
-														  </label>
-													</div>
-													
-													<div class="float-right"><a class="btn btn-success btn-lg" href="cars_response.php">Next</a></div><br>
+													 <!-- Submit form action -->
+														<div class="float-right">
+															 <button type="submit" name="submit" class="btn btn-success btn-lg" tabindex = "1">Next</button>
+															 <input type="hidden" name="submitted" value="TRUE" />
+														</div>
+													 <!-- End of button submit -->
 													
 											 </form> <!-- End of form -->
 											 
