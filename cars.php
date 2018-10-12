@@ -20,8 +20,23 @@
 				if (empty($errors)) {   // No errors so sweet to carry on
 				     print '<p>The car selected was: </p>' .$carSelected;
 						//Now move to the next page and pass in the car selected value 
-					 
-					 
+							
+							//TODO: capture what car was selected... 
+								//$update = $dbh->prepare("UPDATE <table_name>
+								//						   SET last_login = NOW()
+								//						   WHERE <criteria> = '$result[0]'");		 
+								//				$update->execute();
+													//Release the PDO connection
+								//					$dbh = null;
+							
+									//Defining the URL for redirecting to (using absolute URLS)
+									//TODO: Live site is HTTPS? 
+										$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+											//Now add page with car selected parameter to URL
+												$url .= '/cars_response.php?cs='.$carSelected;
+													// now actually do the redirect and exit page
+														header("Location: $url");
+															exit();  
 					 
 				} else { // there was an error - display it
 				    print ' <div class="alert alert-danger" role="alert">
