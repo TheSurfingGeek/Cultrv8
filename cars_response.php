@@ -1,3 +1,51 @@
+<?php 
+#----------------------------------------------------------------------------------------
+# Car response page
+# Created 14/10/2018
+#------------------------------	----------------------------------------------------------
+	
+//------- start of session handling -----------------------------------------------------//
+// Send nothing to the browser prior to the 
+// session_start() line
+	session_start();
+
+			if (!isset($_SESSION['carSelectedId'])) { //you've arrived with no session set
+					
+					print ' <div class="alert alert-danger" role="alert">
+							 Ops! This page has been loaded incorrectly.
+					        </div>';
+					exit();
+				}	
+
+			//has arrived with session so now get the logon id
+				$carSelectedIdPassed  = (int) $_SESSION['carSelectedId'];
+				
+//-------  End of session handling --------------------------------------------------------/
+
+//------   Get car name from the selected id ----------------------------------------------/
+				require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
+				
+					//Get user_id and first name
+						$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+					
+								$PDO_carSelect = $dbh->prepare("SELECT car_name
+																FROM car_list
+																WHERE car_list_id = '$carSelectedIdPassed'");
+								$PDO_carSelect->execute();
+							
+									// Fetch all the rows in the result set
+										$result = $PDO_carSelect->fetch(PDO::FETCH_NUM);
+											if ($result) { // A record was successfully retrieved
+												 $carSelectedName = $result[0];
+											} else {
+												$carSelectedName ='Nothhing was found';
+											}
+										
+									//Release the PDO connection
+										$dbh = null;		
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,7 +94,8 @@
 				<div class="row"><!-- Start of row 1 -->
 					<div class="col-sm"><!-- Column 1 -->
 			
-						<h1 class="mt-4">Hey, nice job! You chose "Four Wheel Drive"</h1>
+						<h1 class="mt-4">Hey, nice job!</h1>
+						<h2> You chose "<?php echo $carSelectedName; ?>"</h2>
 
 						<h3>Here's a list of words associated with this choice - what do you think of these? Agree/disagree? </h3>
 

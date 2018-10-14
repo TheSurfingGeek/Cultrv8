@@ -1,8 +1,8 @@
 <?php
-    #----------------------------------------------------------------------------------------
-    # Car selection page
-	# Created 13/10/2018
-	#----------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------
+# Car selection page
+# Created 13/10/2018
+#----------------------------------------------------------------------------------------
 	
 //Check if the form has been submitted
 	if (isset($_POST['submitted'])) {
@@ -29,9 +29,14 @@
 													//Release the PDO connection
 								//					$dbh = null;
 							
+								//Start a session and set the session variable for car id before loading the next page
+									session_start();
+										$_SESSION['carSelectedId'] = $carSelected;
+								 
 									//Defining the URL for redirecting to (using absolute URLS)
 									//TODO: Live site is HTTPS? 
 										$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+										
 											//Now add page with car selected parameter to URL
 												$url .= '/cars_response.php?cs='.$carSelected;
 													// now actually do the redirect and exit page
