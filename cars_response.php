@@ -95,7 +95,11 @@
 					<div class="col-sm"><!-- Column 1 -->
 			
 						<h1 class="mt-4">Hey, nice job!</h1>
-						<h2> You chose "<?php echo $carSelectedName; ?>"</h2>
+						<h3> You chose:
+							<div class="alert alert-success" role="alert">
+									<?php echo $carSelectedName; ?>
+							</div>
+						</h3>
 
 						<h3>Here's a list of words associated with this choice - what do you think of these? Agree/disagree? </h3>
 
