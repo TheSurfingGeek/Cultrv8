@@ -118,10 +118,42 @@
 				
 				<div class="col"><!-- Form column -->
 				<form>
+							
+						<?php
+												
+							//Connect to the database using the PDO conection method
+								require('./dbscripts/cultrv8_mysql_PDO_connect.php');  
+
+							//Query the car list and loop through the results 
+								$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+
+									$PDO_carResponseQuery = $dbh->prepare("SELECT car_response_word1, car_response_word2,car_response_word3, car_response_word4,car_response_word5
+																	       FROM car_response_list
+																	       WHERE car_list_id = '$carSelectedIdPassed'");
+										$PDO_carResponseQuery->execute();
+												$rowset = $PDO_carResponseQuery->fetchAll(PDO::FETCH_NUM);
+															if ($rowset) {
+																foreach ($rowset as $row) {
+																	//Loop through the results and create a list of words
+																		$responseWord1 = $row[0];
+																		$responseWord2 = $row[1];
+																		$responseWord3 = $row[2];
+																		$responseWord4 = $row[3];
+																		$responseWord5 = $row[4];
+																}
+															} else {  //No rowset was returned 
+																print ' <div class="alert alert-danger" role="alert">
+																			Ops! We have an issue getting a list of associated words for you.
+																		</div>';
+															}
+								//Release the PDO connection
+								$dbh = null;
+																 
+						?>	
+							
 							<div class="row"><!-- start of row -->
 									<div class="col-2">
 										<div class="form-group">
-											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
 											<select class="form-control form-control-lg" id="exampleFormControlSelect1">
 											  <option>Agree</option>
 											  <option>Disagree</option>
@@ -130,7 +162,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Innovative">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord1; ?>">
 									</div>
 									
 									<div class="col">
@@ -143,7 +175,6 @@
 							<div class="row">  
 									<div class="col-2">
 											<div class="form-group">
-												<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
 												 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
 												  <option>Agree</option>
 												  <option>Disagree</option>
@@ -152,7 +183,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Risk Taking">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord2; ?>">
 									</div>
 							  
 									<div class="col">
@@ -164,7 +195,6 @@
 							<div class="row">
 									<div class="col-2">
 										<div class="form-group">
-											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
 											 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
 											  <option>Agree</option>
 											  <option>Disagree</option>
@@ -173,7 +203,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Adventurous">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord3; ?>">
 									</div>
 									
 									<div class="col">
@@ -186,7 +216,6 @@
 							<div class="row"> 
 									<div class="col-2">
 										<div class="form-group">
-											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
 											 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
 											  <option>Agree</option>
 											  <option>Disagree</option>
@@ -195,7 +224,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Dynamic">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord4; ?>">
 									</div>
 									
 									<div class="col">
@@ -207,7 +236,6 @@
 							<div class="row">
 									<div class="col-2">
 										<div class="form-group">
-											<!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
 												<select class="form-control form-control-lg" id="exampleFormControlSelect1">
 												  <option>Agree</option>
 												  <option>Disagree</option>
@@ -216,7 +244,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="Disorganised">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord5; ?>">
 									</div>
 									
 									<div class="col">
