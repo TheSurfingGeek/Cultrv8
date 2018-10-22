@@ -1,11 +1,11 @@
 <?php 
 #----------------------------------------------------------------------------------------
-# Car response page
+# Car response page - expecting the selected car id to be passed within the session
 # Created 14/10/2018
 #------------------------------	----------------------------------------------------------
 	
-//------- start of session handling -----------------------------------------------------//
-// Send nothing to the browser prior to the 
+//------- start of session handling looking for car selected id to be passed------------//
+// Send nothing to the browser prior to the
 // session_start() line
 	session_start();
 
@@ -42,9 +42,29 @@
 											}
 										
 									//Release the PDO connection
-										$dbh = null;		
+										$dbh = null;	
+
+//------    End of car name selection -----------------------------------------------------/										
+										
+
+//-----    Check if the form has been submitted -------------------------------------------/
+	if (isset($_POST['submitted'])) {
+		
+		//Initialise errors array
+		  $errors = array();
+		
+		//Check for required fields
+		
+		
+		if (empty($errors)) {   // No errors so sweet to carry on
+		
+		} //End of if (empty($errors))
+		
+	} //End of submit php
 
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -88,7 +108,7 @@
 			</nav>
 	<!-- END OF NAV BAR SECTION ---------------------------------------------->
 			
-			  <!-- Content here -->
+		  <!-- Content here -->
 			<div class="container">
 			
 				<div class="row"><!-- Start of row 1 -->
@@ -117,14 +137,14 @@
 				<div class="row"><!-- Start of row 2 -->
 				
 				<div class="col"><!-- Form column -->
-				<form>
+				<form action="cars_response.php" method="post"  id="car_response_selection">
 							
 						<?php
 												
 							//Connect to the database using the PDO conection method
 								require('./dbscripts/cultrv8_mysql_PDO_connect.php');  
 
-							//Query the car list and loop through the results 
+							//Query the car list and loop through the results to get the list of assocaited names
 								$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
 
 									$PDO_carResponseQuery = $dbh->prepare("SELECT car_response_word1, car_response_word2,car_response_word3, car_response_word4,car_response_word5
@@ -252,9 +272,17 @@
 									</div>	
 							</div><!-- End of row -->	
 							
-							<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a></div><br>
+							<!-- <div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a></div><br> -->
+							
+							
+							 <!-- Submit form action -->
+									<div class="float-right">
+										 <button type="submit" name="submit" class="btn btn-success btn-lg" tabindex = "1">Next</button>
+										 <input type="hidden" name="submitted" value="TRUE" />
+									</div>
+							<!-- End of button submit -->
 										
-						</form>
+						</form><!-- End of form -->
 				
 				
 				</div><!-- End of form column -->
