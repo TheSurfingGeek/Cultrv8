@@ -1,3 +1,55 @@
+<?php
+#----------------------------------------------------------------------------------------
+# Anchors Oars - expecting session to still be set
+# Created 24/10/2018
+#-----------------------------------------------------------------------------------------
+
+//------- start of session handling looking for car selected id to be passed------------//
+// Send nothing to the browser prior to the
+// session_start() line
+	session_start();
+				if (!isset($_SESSION['carSelectedId'])) { //you've arrived with no session set
+					
+					print ' <div class="alert alert-danger" role="alert">
+							 Ops! This page has been loaded incorrectly.
+					        </div>';
+					exit(); 
+				}	
+				
+//-------  End of session handling --------------------------------------------------------/
+
+
+//-----    Check if the form has been submitted -------------------------------------------/
+	if (isset($_POST['submitted'])) {
+		
+		//Initialise errors array
+		  $errors = array();
+		
+			//Check for required fields
+		
+		
+		if (empty($errors)) {   // No errors so sweet to carry on
+		
+		
+		
+		
+		//Defining the URL for redirecting to (using absolute URLS)
+									//TODO: Live site is HTTPS? 
+										$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+										
+											//Now add page with car selected parameter to URL
+										 		$url .= '/anchors_oars_response.php';
+													// now actually do the redirect and exit page
+														header("Location: $url");
+															exit();  
+		
+		} //End of if (empty($errors))
+		
+	} //End of submit php
+	
+//-------  End of the submit section -------------------------------------------------------/
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +61,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Question 3- Anchors & Oars</title>
+    <title>Question 3- Anchors & Oars questions</title>
   </head>
   
   <body>
@@ -69,7 +121,7 @@
 				<div class="row"><!-- Start of row 2 -->
 				
 					<div class="col"><!-- Form column -->
-						<form>
+						<form action="anchors_oars.php" method="post"  id="car_response_selection">
 									<div class="row">
 										<div class="col">
 											<div class="form-group">
@@ -112,7 +164,14 @@
 										</div>
 									</div>	
 									
-									<div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars_response.php">Next</a></div>
+									<!-- <div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars_response.php">Next</a></div> -->
+									
+								<!-- Submit form action -->
+									<div class="float-right">
+										 <button type="submit" name="submit" class="btn btn-success btn-lg" tabindex = "1">Next</button>
+										 <input type="hidden" name="submitted" value="TRUE" />
+									</div>
+									<!-- End of button submit -->
 						
 										
 							</form>

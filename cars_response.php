@@ -53,14 +53,29 @@
 		//Initialise errors array
 		  $errors = array();
 		
-		//Check for required fields
+			//Check for required fields
 		
 		
 		if (empty($errors)) {   // No errors so sweet to carry on
 		
+		
+		
+		
+		//Defining the URL for redirecting to (using absolute URLS)
+									//TODO: Live site is HTTPS? 
+										$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+										
+											//Now add page with car selected parameter to URL
+										 		$url .= '/anchors_oars.php';
+													// now actually do the redirect and exit page
+														header("Location: $url");
+															exit();  
+		
 		} //End of if (empty($errors))
 		
 	} //End of submit php
+	
+//-------  End of the submit section -------------------------------------------------------/
 
 ?>
 
