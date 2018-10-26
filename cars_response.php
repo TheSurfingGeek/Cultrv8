@@ -54,32 +54,65 @@
 		  $errors = array();
 		
 			//Check for required fields
+					  if (empty($_POST['selectionAgreeDisagree1'])) {
+							$errors[] = 'Please agree or disagree - question 1.';
+						 } else {
+								 $selectedAgreeDisagree1 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree1']) );	
+								}
+								
+									 if (empty($_POST['inputWords1'])) {
+											$errors[] = 'Please enter some words.';
+										} else {
+												$inputWords1 = htmlspecialchars( strip_tags($_POST['inputWords1']) );	
+										}
+									
+						 
+									if (empty($_POST['selectionAgreeDisagree2'])) {
+											$errors[] = 'Please agree or disagree - question 2.';
+										 } else {
+											$selectedAgreeDisagree2 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree2']) );
+										 }
+						 
+															 if (empty($_POST['selectionAgreeDisagree3'])) {
+																$errors[] = 'Please agree or disagree - question 3.';
+															 } else {
+																$selectedAgreeDisagree3 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree3']) );
+															 }
+													 
+																 if (empty($_POST['selectionAgreeDisagree4'])) {
+																	$errors[] = 'Please agree or disagree - question 4.';
+																 } else {
+																	$selectedAgreeDisagree4 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree4']) );
+																 }
+													 
+																	 if (empty($_POST['selectionAgreeDisagree5'])) {
+																		$errors[] = 'Please agree or disagree - question 5.';
+																	 } else {
+																		$selectedAgreeDisagree5 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree5']) );
+																	 }
+						 
 		
-		
-		if (empty($errors)) {   // No errors so sweet to carry on
-		
-		
-		
-		
-		//Defining the URL for redirecting to (using absolute URLS)
-									//TODO: Live site is HTTPS? 
-										$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+											if (empty($errors)) {   // No errors so sweet to carry on
 										
-											//Now add page with car selected parameter to URL
-										 		$url .= '/anchors_oars.php';
-													// now actually do the redirect and exit page
-														header("Location: $url");
-															exit();  
-		
-		} //End of if (empty($errors))
+															print $selectedAgreeDisagree1;
+															print $inputWords1;
+															print $selectedAgreeDisagree2;
+															print $selectedAgreeDisagree3;
+															print $selectedAgreeDisagree4;
+															print $selectedAgreeDisagree5;
+												
+										    } else  { // there was an error - display it
+														print ' <div class="alert alert-danger" role="alert">
+																 Ops! No Words have been selected.
+																</div>';
+											
+													} //End of if (empty($errors))
 		
 	} //End of submit php
 	
 //-------  End of the submit section -------------------------------------------------------/
 
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -97,7 +130,7 @@
   
   <body>
 	
-	<!-- NAV  BAR ------------------------------------------------------------>
+	<!-- NAV  BAR ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 			<nav class="navbar navbar-expand-lg navbar-light">
 				  <a class="navbar-brand" href="index.php">
 					<img src="img/Cultrv8_logo.jpg" width="250" height="179" class="d-inline-block align-top" alt="">
@@ -121,7 +154,7 @@
 									</ul>
 								</div>
 			</nav>
-	<!-- END OF NAV BAR SECTION ---------------------------------------------->
+	<!-- END OF NAV BAR SECTION ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 			
 		  <!-- Content here -->
 			<div class="container">
@@ -147,7 +180,6 @@
 					</div><!-- End of column 2 -->
 					
 				</div><!-- end of row --->
-				
 				
 				<div class="row"><!-- Start of row 2 -->
 				
@@ -189,7 +221,7 @@
 							<div class="row"><!-- start of row -->
 									<div class="col-2">
 										<div class="form-group">
-											<select class="form-control form-control-lg" id="exampleFormControlSelect1">
+											<select class="form-control form-control-lg" id="selectionAgreeDisagree" name="selectionAgreeDisagree1">
 											  <option>Agree</option>
 											  <option>Disagree</option>
 											</select>
@@ -200,8 +232,8 @@
 										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord1; ?>">
 									</div>
 									
-									<div class="col">
-										<input type="text" class="form-control" id="EnteredWord1" placeholder="Enter other words you would use to describe your choice, and your organisation?">
+									<div class=" col">
+										<input type="text" class="form-control" id="EnteredWord1" name="inputWords1" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->		
 									
@@ -210,7 +242,7 @@
 							<div class="row">  
 									<div class="col-2">
 											<div class="form-group">
-												 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+												 <select class="form-control form-control-lg" id="selectionAgreeDisagree" name="selectionAgreeDisagree2">
 												  <option>Agree</option>
 												  <option>Disagree</option>
 												</select>
@@ -222,7 +254,7 @@
 									</div>
 							  
 									<div class="col">
-										<input type="text" class="form-control" id="EnteredWord2" placeholder="Enter other words you would use to describe your choice, and your organisation?">
+										<input type="text" class="form-control" id="EnteredWord2" name="inputWords2" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 							
@@ -230,7 +262,7 @@
 							<div class="row">
 									<div class="col-2">
 										<div class="form-group">
-											 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+											 <select class="form-control form-control-lg" id="selectionAgreeDisagree" name="selectionAgreeDisagree3">
 											  <option>Agree</option>
 											  <option>Disagree</option>
 											</select>
@@ -242,7 +274,7 @@
 									</div>
 									
 									<div class="col">
-										<input type="text" class="form-control" id="EnteredWord3" placeholder="Enter other words you would use to describe your choice, and your organisation?">
+										<input type="text" class="form-control" id="EnteredWord3" name="inputWords3" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 									
@@ -251,7 +283,7 @@
 							<div class="row"> 
 									<div class="col-2">
 										<div class="form-group">
-											 <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+											 <select class="form-control form-control-lg" id="selectionAgreeDisagree" name="selectionAgreeDisagree4">
 											  <option>Agree</option>
 											  <option>Disagree</option>
 											</select>
@@ -263,7 +295,7 @@
 									</div>
 									
 									<div class="col">
-										<input type="text" class="form-control" id="EnteredWord4" placeholder="Enter other words you would use to describe your choice, and your organisation?">
+										<input type="text" class="form-control" id="EnteredWord4" name="inputWords4" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 									
@@ -271,7 +303,7 @@
 							<div class="row">
 									<div class="col-2">
 										<div class="form-group">
-												<select class="form-control form-control-lg" id="exampleFormControlSelect1">
+												<select class="form-control form-control-lg" id="selectionAgreeDisagree" name="selectionAgreeDisagree5">
 												  <option>Agree</option>
 												  <option>Disagree</option>
 												</select>
@@ -283,7 +315,7 @@
 									</div>
 									
 									<div class="col">
-										<input type="text" class="form-control" id="EnteredWord5" placeholder="Enter other words you would use to describe your choice, and your organisation?">
+										<input type="text" class="form-control" id="EnteredWord5" name="inputWords5" placeholder="Enter other words you would use to describe your choice, and your organisation?">
 									</div>	
 							</div><!-- End of row -->	
 							
