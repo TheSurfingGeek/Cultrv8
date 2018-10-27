@@ -65,52 +65,122 @@
 										} else {
 												$inputWords1 = htmlspecialchars( strip_tags($_POST['inputWords1']) );	
 										}
-									
-						 
-									if (empty($_POST['selectionAgreeDisagree2'])) {
-											$errors[] = 'Please agree or disagree - question 2.';
-										 } else {
-											$selectedAgreeDisagree2 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree2']) );
-										 }
-						 
-															 if (empty($_POST['selectionAgreeDisagree3'])) {
-																$errors[] = 'Please agree or disagree - question 3.';
+										
+											if (empty($_POST['inputResponseWord1'])) {
+													$errors[] = 'No response word was selected.';
+												} else {
+													$responseWord1 = htmlspecialchars( strip_tags($_POST['inputResponseWord1']) );	
+												}
+											
+						 // ------------------------------------------------------------------------------------------------------------------------ //
+														if (empty($_POST['selectionAgreeDisagree2'])) {
+																$errors[] = 'Please agree or disagree - question 2.';
 															 } else {
-																$selectedAgreeDisagree3 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree3']) );
+																$selectedAgreeDisagree2 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree2']) );
 															 }
-													 
-																 if (empty($_POST['selectionAgreeDisagree4'])) {
-																	$errors[] = 'Please agree or disagree - question 4.';
-																 } else {
-																	$selectedAgreeDisagree4 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree4']) );
-																 }
-													 
-																	 if (empty($_POST['selectionAgreeDisagree5'])) {
-																		$errors[] = 'Please agree or disagree - question 5.';
-																	 } else {
-																		$selectedAgreeDisagree5 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree5']) );
-																	 }
+									 
+																 if (empty($_POST['inputWords2'])) {
+																		$errors[] = 'Please enter some words.';
+																	} else {
+																			$inputWords2 = htmlspecialchars( strip_tags($_POST['inputWords2']) );	
+																	}	
+
+																		if (empty($_POST['inputResponseWord2'])) {
+																				$errors[] = 'No response word was selected.';
+																			} else {
+																					$responseWord2 = htmlspecialchars( strip_tags($_POST['inputResponseWord2']) );	
+																			}
+						// -------------------------------------------------------------------------------------------------------------------------- //
+																						if (empty($_POST['selectionAgreeDisagree3'])) {
+																								$errors[] = 'Please agree or disagree - question 3.';
+																							} else {
+																								$selectedAgreeDisagree3 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree3']) );
+																							}
+																				 
+																								if (empty($_POST['inputWords3'])) {
+																										$errors[] = 'Please enter some words.';
+																									} else {
+																										$inputWords3 = htmlspecialchars( strip_tags($_POST['inputWords3']) );	
+																									}	
+																									
+																										if (empty($_POST['inputResponseWord3'])) {
+																												$errors[] = 'No response word was selected.';
+																											} else {
+																												$responseWord3 = htmlspecialchars( strip_tags($_POST['inputResponseWord3']) );	
+																											}
+						// -------------------------------------------------------------------------------------------------------------------------- //							 
+														 if (empty($_POST['selectionAgreeDisagree4'])) {
+																$errors[] = 'Please agree or disagree - question 4.';
+															} else {
+																$selectedAgreeDisagree4 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree4']) );
+															}
+									 
+																if (empty($_POST['inputWords4'])) {
+																		$errors[] = 'Please enter some words.';
+																	} else {
+																		$inputWords4 = htmlspecialchars( strip_tags($_POST['inputWords4']) );	
+																	}
+
+																		if (empty($_POST['inputResponseWord4'])) {
+																				$errors[] = 'No response word was selected.';
+																			} else {
+																					$responseWord4 = htmlspecialchars( strip_tags($_POST['inputResponseWord4']) );	
+																			}
+						// -------------------------------------------------------------------------------------------------------------------------- //							 
+							 if (empty($_POST['selectionAgreeDisagree5'])) {
+									$errors[] = 'Please agree or disagree - question 5.';
+								} else {
+									$selectedAgreeDisagree5 = htmlspecialchars( strip_tags($_POST['selectionAgreeDisagree5']) );
+								}
+								
+									if (empty($_POST['inputWords5'])) {
+											$errors[] = 'Please enter some words.';
+										} else {
+											$inputWords5 = htmlspecialchars( strip_tags($_POST['inputWords5']) );	
+										}	
+										
+										if (empty($_POST['inputResponseWord5'])) {
+													$errors[] = 'No response word was selected.';
+												} else {
+													$responseWord5 = htmlspecialchars( strip_tags($_POST['inputResponseWord5']) );	
+												}
+						// -------------------------------------------------------------------------------------------------------------------------- //																	 
 						 
 		
-											if (empty($errors)) {   // No errors so sweet to carry on
-										
-															print $selectedAgreeDisagree1;
-															print $inputWords1;
-															print $selectedAgreeDisagree2;
-															print $selectedAgreeDisagree3;
-															print $selectedAgreeDisagree4;
-															print $selectedAgreeDisagree5;
-												
-										    } else  { // there was an error - display it
-														print ' <div class="alert alert-danger" role="alert">
-																 Ops! No Words have been selected.
-																</div>';
+					if (empty($errors)) {   // No errors so sweet to carry on
+					
+						// Do insert into database record  //
+						
+									print $responseWord1;
+										print $selectedAgreeDisagree1;
+											print $inputWords1;
 											
-													} //End of if (empty($errors))
+									print $responseWord2;
+										print $selectedAgreeDisagree2;
+											print $inputWords2;
+										
+									print $responseWord3;	
+										print $selectedAgreeDisagree3;
+											print $inputWords3;
+											
+									print $responseWord4;		
+										print $selectedAgreeDisagree4;
+											print $inputWords4;
+									
+									print $responseWord5;
+										print $selectedAgreeDisagree5;
+											print $inputWords5;
+						
+					} else  { // there was an error - display it
+								print ' <div class="alert alert-danger" role="alert">
+										 Ops! No Words have been selected.
+										</div>';
+					
+							} //End of if (empty($errors))
 		
 	} //End of submit php
 	
-//-------  End of the submit section -------------------------------------------------------/
+//-------  End of the submit section ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
 
 ?>
 
@@ -229,7 +299,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord1; ?>">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" name="inputResponseWord1" value="<?php echo $responseWord1; ?>">
 									</div>
 									
 									<div class=" col">
@@ -250,7 +320,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord2; ?>">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" name="inputResponseWord2" value="<?php echo $responseWord2; ?>">
 									</div>
 							  
 									<div class="col">
@@ -270,7 +340,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord3; ?>">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" name="inputResponseWord3" value="<?php echo $responseWord3; ?>">
 									</div>
 									
 									<div class="col">
@@ -291,7 +361,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord4; ?>">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" name="inputResponseWord4" value="<?php echo $responseWord4; ?>">
 									</div>
 									
 									<div class="col">
@@ -311,7 +381,7 @@
 									</div>
 									
 									<div class="col-2">
-										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" value="<?php echo $responseWord5; ?>">
+										<input type="text" readonly class="form-control-lg form-control-plaintext" id="staticEmail2" name="inputResponseWord5" value="<?php echo $responseWord5; ?>">
 									</div>
 									
 									<div class="col">
