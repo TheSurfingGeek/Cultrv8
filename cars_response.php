@@ -17,7 +17,7 @@
 					exit();
 				}	
 
-			//has arrived with session so now get the logon id
+			//has arrived with session so now get the car id
 				$carSelectedIdPassed  = (int) $_SESSION['carSelectedId'];
 				
 //-------  End of session handling --------------------------------------------------------/
@@ -151,6 +151,7 @@
 					
 						// Do insert into database record  //
 						
+								print $carSelectedIdPassed;
 									print $responseWord1;
 										print $selectedAgreeDisagree1;
 											print $inputWords1;
