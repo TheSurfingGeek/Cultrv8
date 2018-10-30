@@ -149,8 +149,8 @@
 		
 					if (empty($errors)) {   // No errors so sweet to carry on
 					
-						// Do insert into database record  //
 						
+						// Output variables for debugging purposes         // 
 								print $carSelectedIdPassed;
 									print $responseWord1;
 										print $selectedAgreeDisagree1;
@@ -171,7 +171,84 @@
 									print $responseWord5;
 										print $selectedAgreeDisagree5;
 											print $inputWords5;
-						
+											
+						// Do insert into database record                         //					
+						//Connect to the database using the PDO conection method  //
+						try {
+							require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
+				
+							//Get user_id and first name
+								$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+	
+									$carInsertStmt = $dbh->prepare("INSERT INTO car_response_word_association_response 
+																	(
+																		car_id,
+																		response_word1,
+																		response_word2,
+																		response_word3,
+																		response_word4,
+																		response_word5,
+																		response1_alternative,
+																		response2_alternative,
+																		response3_alternative,
+																		response4_alternative,
+																		response5_alternative,
+																		word1_response,
+																		word2_response,
+																		word3_response,
+																		word4_response,
+																		word5_response
+																	)
+																	VALUES (
+																				:v_car_id,
+																				:v_response_word1,
+																				:v_response_word2,
+																				:v_response_word3,
+																				:v_response_word4,
+																				:v_response_word5,
+																				:v_response1_alternative,
+																				:v_response2_alternative,
+																				:v_response3_alternative,
+																				:v_response4_alternative,
+																				:v_response5_alternative,
+																				:v_word1_response,
+																				:v_word2_response,
+																				:v_word3_response,
+																				:v_word4_response,
+																				:v_word5_response
+																			)");
+										
+																				$carInsertStmt->bindParam(':v_car_id', $carSelectedIdPassed);
+																				$carInsertStmt->bindParam(':v_response_word1', $responseWord1);
+																				$carInsertStmt->bindParam(':v_response_word2', $responseWord2);
+																				$carInsertStmt->bindParam(':v_response_word3', $responseWord3);
+																				$carInsertStmt->bindParam(':v_response_word4', $responseWord4);
+																				$carInsertStmt->bindParam(':v_response_word5', $responseWord5);
+																				$carInsertStmt->bindParam(':v_response1_alternative', $inputWords1);
+																				$carInsertStmt->bindParam(':v_response2_alternative', $inputWords2);
+																				$carInsertStmt->bindParam(':v_response3_alternative', $inputWords3);
+																				$carInsertStmt->bindParam(':v_response4_alternative', $inputWords4);
+																				$carInsertStmt->bindParam(':v_response5_alternative', $inputWords5);
+																				$carInsertStmt->bindParam(':v_word1_response', $selectedAgreeDisagree1);
+																				$carInsertStmt->bindParam(':v_word2_response', $selectedAgreeDisagree2);
+																				$carInsertStmt->bindParam(':v_word3_response', $selectedAgreeDisagree3);
+																				$carInsertStmt->bindParam(':v_word4_response', $selectedAgreeDisagree4);
+																				$carInsertStmt->bindParam(':v_word5_response', $selectedAgreeDisagree5);
+											
+																					// Now run the insert query
+																						$carInsertStmt->execute();
+							}
+								catch(PDOException $e)   {
+										 echo "Error: " . $e->getMessage();
+							}
+																																			
+									//Release the PDO connection
+										$dbh = null;
+										Print ' <div class="alert alert-danger" role="alert">
+													Database insert was succesful! 
+												</div>';
+																				
+														
 					} else  { // there was an error - display it
 								print ' <div class="alert alert-danger" role="alert">
 										 Ops! No Words have been selected.

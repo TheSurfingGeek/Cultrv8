@@ -21,13 +21,7 @@
 				     print '<p>The car selected was: </p>' .$carSelected;
 						//Now move to the next page and pass in the car selected value 
 							
-							//TODO: capture what car was selected... 
-								//$update = $dbh->prepare("UPDATE <table_name>
-								//						   SET last_login = NOW()
-								//						   WHERE <criteria> = '$result[0]'");		 
-								//				$update->execute();
-													//Release the PDO connection
-								//					$dbh = null;
+							//TODO: capture what car was selected and put into database?
 							
 								//Start a session and set the session variable for car id before loading the next page
 									session_start();
