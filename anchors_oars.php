@@ -7,6 +7,7 @@
 //------- start of session handling looking for car selected id to be passed------------//
 // Send nothing to the browser prior to the
 // session_start() line
+   session_name ('yourVisitID');
 	session_start();
 				if (!isset($_SESSION['carSelectedId'])) { //you've arrived with no session set
 					

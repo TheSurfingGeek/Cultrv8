@@ -24,18 +24,19 @@
 							//TODO: capture what car was selected and put into database?
 							
 								//Start a session and set the session variable for car id before loading the next page
-									session_start();
-										$_SESSION['carSelectedId'] = $carSelected;
-								 
-									//Defining the URL for redirecting to (using absolute URLS)
-									//TODO: Live site is HTTPS? 
-										$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
-										
-											//Now add page with car selected parameter to URL
-												$url .= '/cars_response.php?cs='.$carSelected;
-													// now actually do the redirect and exit page
-														header("Location: $url");
-															exit();  
+									session_name ('yourVisitID');
+										session_start();
+											$_SESSION['carSelectedId'] = $carSelected; 
+									 
+										//Defining the URL for redirecting to (using absolute URLS)
+										//TODO: Live site is HTTPS? 
+											$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+											
+												//Now add page with car selected parameter to URL
+													$url .= '/cars_response.php?cs='.$carSelected;
+														// now actually do the redirect and exit page
+															header("Location: $url");
+																exit();  
 					 
 				} else { // there was an error - display it
 				    print ' <div class="alert alert-danger" role="alert">

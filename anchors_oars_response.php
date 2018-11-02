@@ -8,14 +8,15 @@
 
 // Send nothing to the browser prior to the
 // session_start() line
-	session_start();
-				if (!isset($_SESSION['carSelectedId'])) { //you've arrived with no session set
-					
-					print ' <div class="alert alert-danger" role="alert">
-							 Ops! This page has been loaded incorrectly.
-					        </div>';
-					exit(); 
-				}	
+    session_name ('yourVisitID');
+		session_start();
+					if (!isset($_SESSION['carSelectedId'])) { //you've arrived with no session set
+						
+						print ' <div class="alert alert-danger" role="alert">
+								 Ops! This page has been loaded incorrectly.
+								</div>';
+						exit(); 
+					}	
 				
 //-------  End of session handling --------------------------------------------------------/
 

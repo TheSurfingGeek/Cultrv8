@@ -7,6 +7,7 @@
 //------- start of session handling looking for car selected id to be passed------------//
 // Send nothing to the browser prior to the
 // session_start() line
+   session_name ('yourVisitID');
 	session_start();
 
 			if (!isset($_SESSION['carSelectedId'])) { //you've arrived with no session set
@@ -19,6 +20,7 @@
 
 			//has arrived with session so now get the car id
 				$carSelectedIdPassed  = (int) $_SESSION['carSelectedId'];
+				$capturedSession = $_SESSION['yourVisitID'];
 				
 //-------  End of session handling --------------------------------------------------------/
 
@@ -151,6 +153,9 @@
 					
 						
 						// Output variables for debugging purposes         // 
+						      $mySession = session_id();
+							   print $mySession;
+								
 								print $carSelectedIdPassed;
 									print $responseWord1;
 										print $selectedAgreeDisagree1;
@@ -179,9 +184,11 @@
 				
 							//Get user_id and first name
 								$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+								$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 									$carInsertStmt = $dbh->prepare("INSERT INTO car_response_word_association_response 
 																	(
+																		session_id,
 																		car_id,
 																		response_word1,
 																		response_word2,
@@ -197,9 +204,11 @@
 																		word2_response,
 																		word3_response,
 																		word4_response,
-																		word5_response
+																		word5_response,
+																		time_stamp
 																	)
 																	VALUES (
+																				:v_session_id,
 																				:v_car_id,
 																				:v_response_word1,
 																				:v_response_word2,
@@ -215,9 +224,11 @@
 																				:v_word2_response,
 																				:v_word3_response,
 																				:v_word4_response,
-																				:v_word5_response
+																				:v_word5_response,
+																				NOW()
 																			)");
-										
+																				
+																				$carInsertStmt->bindParam(':v_session_id', $mySession);
 																				$carInsertStmt->bindParam(':v_car_id', $carSelectedIdPassed);
 																				$carInsertStmt->bindParam(':v_response_word1', $responseWord1);
 																				$carInsertStmt->bindParam(':v_response_word2', $responseWord2);
@@ -239,7 +250,10 @@
 																						$carInsertStmt->execute();
 							}
 								catch(PDOException $e)   {
-										 echo "Error: " . $e->getMessage();
+										Print ' <div class="alert alert-danger" role="alert">
+													SQL Error: '  . $e->getMessage();
+										print '</div>';
+										 exit();
 							}
 																																			
 									//Release the PDO connection
