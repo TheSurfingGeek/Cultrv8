@@ -63,7 +63,7 @@
 								}
 								
 									 if (empty($_POST['inputWords1'])) {
-											$errors[] = 'Please enter some words.';
+											$inputWords1 = NULL;
 										} else {
 												$inputWords1 = htmlspecialchars( strip_tags($_POST['inputWords1']) );	
 										}
@@ -82,7 +82,7 @@
 															 }
 									 
 																 if (empty($_POST['inputWords2'])) {
-																		$errors[] = 'Please enter some words.';
+																		$inputWords2 = NULL;
 																	} else {
 																			$inputWords2 = htmlspecialchars( strip_tags($_POST['inputWords2']) );	
 																	}	
@@ -100,7 +100,7 @@
 																							}
 																				 
 																								if (empty($_POST['inputWords3'])) {
-																										$errors[] = 'Please enter some words.';
+																										$inputWords3 = NULL;
 																									} else {
 																										$inputWords3 = htmlspecialchars( strip_tags($_POST['inputWords3']) );	
 																									}	
@@ -118,7 +118,7 @@
 															}
 									 
 																if (empty($_POST['inputWords4'])) {
-																		$errors[] = 'Please enter some words.';
+																		$inputWords4 = NULL;
 																	} else {
 																		$inputWords4 = htmlspecialchars( strip_tags($_POST['inputWords4']) );	
 																	}
@@ -136,7 +136,7 @@
 								}
 								
 									if (empty($_POST['inputWords5'])) {
-											$errors[] = 'Please enter some words.';
+											$inputWords5 = NULL;
 										} else {
 											$inputWords5 = htmlspecialchars( strip_tags($_POST['inputWords5']) );	
 										}	
@@ -154,28 +154,28 @@
 						
 						// Output variables for debugging purposes         // 
 						      $mySession = session_id();
-							   print $mySession;
+						//	   print $mySession;
 								
-								print $carSelectedIdPassed;
-									print $responseWord1;
-										print $selectedAgreeDisagree1;
-											print $inputWords1;
+						//		print $carSelectedIdPassed;
+						//			print $responseWord1;
+						//				print $selectedAgreeDisagree1;
+						//					print $inputWords1;
 											
-									print $responseWord2;
-										print $selectedAgreeDisagree2;
-											print $inputWords2;
+						//			print $responseWord2;
+						//				print $selectedAgreeDisagree2;
+						//					print $inputWords2;
 										
-									print $responseWord3;	
-										print $selectedAgreeDisagree3;
-											print $inputWords3;
+						//			print $responseWord3;	
+						//				print $selectedAgreeDisagree3;
+						//					print $inputWords3;
 											
-									print $responseWord4;		
-										print $selectedAgreeDisagree4;
-											print $inputWords4;
+						//			print $responseWord4;		
+						//				print $selectedAgreeDisagree4;
+						//					print $inputWords4;
 									
-									print $responseWord5;
-										print $selectedAgreeDisagree5;
-											print $inputWords5;
+						//			print $responseWord5;
+						//				print $selectedAgreeDisagree5;
+						//					print $inputWords5;
 											
 						// Do insert into database record                         //					
 						//Connect to the database using the PDO conection method  //
@@ -261,6 +261,16 @@
 										Print ' <div class="alert alert-danger" role="alert">
 													Database insert was succesful! 
 												</div>';
+												
+													//Defining the URL for redirecting to (using absolute URLS)
+														//TODO: Live site is HTTPS? 
+															$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+															
+																//Now add page with car selected parameter to URL
+																	$url .= '/anchors_oars.php';
+																		// now actually do the redirect and exit page
+																			header("Location: $url");
+																				exit();  
 																				
 														
 					} else  { // there was an error - display it
@@ -268,7 +278,7 @@
 										 Ops! No Words have been selected.
 										</div>';
 					
-							} //End of if (empty($errors))
+					} //End of if (empty($errors))
 		
 	} //End of submit php
 	
@@ -305,14 +315,9 @@
 			  
 								 <div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav">
-									  
-									  <li class="nav-item ml-4 mr-2">
-										<a class="btn btn-success btn-lg" href="cars.php">Back <span class="sr-only">(current)</span></a>
-									  </li>
-									  
-									  <li class="nav-item ml-4 mr-2">
-										<a class="btn btn-success btn-lg" href="anchors_oars.php">Next</a>
-									  </li>
+											  <li class="nav-item ml-4 mr-2">
+												<a class="btn btn-success btn-lg" href="cars.php">Back <span class="sr-only">(current)</span></a>
+											  </li>
 									</ul>
 								</div>
 			</nav>
