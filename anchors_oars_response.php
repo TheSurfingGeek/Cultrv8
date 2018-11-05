@@ -8,6 +8,7 @@
 
 // Send nothing to the browser prior to the
 // session_start() line
+		session_name ('yourVisitID');
 		session_start();
 					if (!isset($_SESSION['carSelectedId'])) { //you've arrived with no session set
 						
@@ -29,6 +30,7 @@
 		
 		
 		if (empty($errors)) {   // No errors so sweet to carry on
+		
 		
 		
 		
@@ -129,52 +131,108 @@
 				
 					<div class="col"><!-- Form column -->
 							<form action="anchors_oars_response.php" method="post"  id="car_response_selection">
+									
 									<div class="row"><!-- Row 1 -->
-										<div class="col">
-										   <div class="form-group">
-											<label for="AnchorReponse1" class="form-control-lg">Anchor</label>
-											<input type="text" class="form-control border-secondary" id="AnchorReponse1" aria-describedby="emailHelp" placeholder="Enter most important anchor to fix">
-										   </div>	
-										</div>
+												<div class="col">		   
+																<div class="form-group">
+																	<label for="anchorMultipleSelect" class="form-control-lg">Select the anchor</label>
+																		<select multiple class="form-control" id="anchorMultipleSelect" name="anchorMultipleSelection">
+																						<?php	
+																							//Connect to the database using the PDO conection method
+																								require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
+															
+																							//Get the anchor responses from the database
+																								$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+																
+																									$PDO_anchorlist_Query = $dbh->prepare("SELECT grade_id, grade
+																																 FROM grade g INNER JOIN current_season cs
+																																 ON g.grade_season = cs.current_season_id
+																																 WHERE cs.season_year = '$current_season_year'");
+																										$PDO_anchorlist_Query->execute();
+																												$rowset = $PDO_anchorlist_Query->fetchAll(PDO::FETCH_NUM);
+																															if ($rowset) {
+																																foreach ($rowset as $row) {
+																																	print '<option value="'.$row[0].'">'.$row[1].'</option>';
+																																}
+																															} else {  //No rowset was returned 
+																																print 'Sorry - no anchor words have been found!';
+																															}
+																									//Release the PDO connection
+																									$dbh = null;
+																						?>
+																		</select>
+																</div>
+												</div><!-- End of column -->
 									 
-										<div class="col">
-											<div class="form-group">
-													<label for="exampleFormControlSelect1" class="form-control-lg">Select theme category</label>
-													<select class="form-control border-secondary" id="exampleFormControlSelect1">
-													  <option>Theme</option>
-													  <option>2</option>
-													  <option>3</option>
-													  <option>4</option>
-													  <option>5</option>
-													</select>
-											</div>
-										</div>
+																					<div class="col">
+																						<div class="form-group">
+																								<label for="exampleFormControlSelect1" class="form-control-lg">Select theme category</label>
+																								<select class="form-control border-secondary" id="exampleFormControlSelect1">
+																								  <option>Theme</option>
+																								  <option>2</option>
+																								  <option>3</option>
+																								  <option>4</option>
+																								  <option>5</option>
+																								</select>
+																						</div>
+																					</div>
 									</div><!-- End of row 1 -->
 									
 									<div class="row"><!-- Row 2 -->
-										<div class="col">
-											<div class="form-group">
-												<label for="OarResponse1" class="form-control-lg">Oar</label>
-												<input type="text" class="form-control border-primary" id="OarResponse1" aria-describedby="emailHelp" placeholder="Enter most important Oar to fix">
-											</div>
-										</div>
+													<div class="col">		   
+																<div class="form-group">
+																	<label for="oarMultipleSelect" class="form-control-lg">Select the Oar</label>
+																		<select multiple class="form-control" id="oarMultipleSelect" name="oarMultipleSelection">
+																			 <?php	
+																							//Connect to the database using the PDO conection method
+																								require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
+															
+																							//Get the oar responses from the database
+																								$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+																
+																									$PDO_oarlist_Query = $dbh->prepare("SELECT grade_id, grade
+																																 FROM grade g INNER JOIN current_season cs
+																																 ON g.grade_season = cs.current_season_id
+																																 WHERE cs.season_year = '$current_season_year'");
+																										$PDO_oarlist_Query->execute();
+																												$rowset = $PDO_oarlist_Query->fetchAll(PDO::FETCH_NUM);
+																															if ($rowset) {
+																																foreach ($rowset as $row) {
+																																	print '<option value="'.$row[0].'">'.$row[1].'</option>';
+																																}
+																															} else {  //No rowset was returned 
+																																print 'Sorry - no oar words have been found!';
+																															}
+																									//Release the PDO connection
+																									$dbh = null;
+																						?>
+																		</select>
+																</div>
+													</div><!-- End of column -->
 									 
-										<div class="col">
-											<div class="form-group">
-													<label for="exampleFormControlSelect1" class="form-control-lg">Select theme category</label>
-													<select class="form-control border-primary" id="exampleFormControlSelect1">
-													  <option>Theme</option>
-													  <option>2</option>
-													  <option>3</option>
-													  <option>4</option>
-													  <option>5</option>
-													</select>
-											</div>
-										</div>
+													<div class="col">
+														<div class="form-group">
+																<label for="exampleFormControlSelect1" class="form-control-lg">Select theme category</label>
+																<select class="form-control border-primary" id="exampleFormControlSelect1">
+																  <option>Theme</option>
+																  <option>2</option>
+																  <option>3</option>
+																  <option>4</option>
+																  <option>5</option>
+																</select>
+														</div>
+													</div>
 									</div><!-- End of row 2 -->
 									
 									
-									<div class="float-right"><a class="btn btn-success btn-lg" href="share_results.php">Next</a></div>
+									<!-- <div class="float-right"><a class="btn btn-success btn-lg" href="share_results.php">Next</a></div> -->
+									<!-- Submit form action -->
+										<div class="float-right">
+											 <button type="submit" name="submit" class="btn btn-success btn-lg" >Next</button>
+											 <input type="hidden" name="submitted" value="TRUE" />
+										</div>
+									<!-- End of button submit -->
+									
 										
 							</form>
 					</div><!-- End of form column -->

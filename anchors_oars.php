@@ -29,42 +29,42 @@
 			//Check for required fields
 			
 					  if (empty($_POST['oarEntry1'])) {
-							$errors[] = 'Missing an Oar entry.';
+							$errors[] = 'Sorry we\'re missing some Oar entrys - please put in 3 of them.';
 						 } else {
 								 $inputOarEntry1 = htmlspecialchars( strip_tags($_POST['oarEntry1']) );	
 								}
 					 // ------------------------------------------------------------------------------------------------------------------------------------------------ //
 
 											 if (empty($_POST['oarEntry2'])) {
-													$errors[] = 'Please agree or disagree - question 1.';
+													$errors[] = 'Sorry we\'re missing some Oar entrys - please put in 3 of them.';
 												 } else {
 														 $inputOarEntry2 = htmlspecialchars( strip_tags($_POST['oarEntry2']) );	
 												}
 					 // ------------------------------------------------------------------------------------------------------------------------------------------------- //
 								
 																 if (empty($_POST['oarEntry3'])) {
-																		$errors[] = 'Missing an Oar entry.';
+																		$errors[] = 'Sorry we\'re missing some Oar entrys - please put in 3 of them.';
 																	} else {
 																		$inputOarEntry3 = htmlspecialchars( strip_tags($_POST['oarEntry3']) );	
 																	}
 					// -------------------------------------------------------------------------------------------------------------------------------------------------- //
 
 																 if (empty($_POST['anchorEntry1'])) {
-																	$errors[] = 'Please agree or disagree - question 1.';
+																	$errors[] = 'Sorry we\'re missing some Anchor entrys - please put in 3 of them.';
 																 } else {
 																		 $inputAnchorEntry1 = htmlspecialchars( strip_tags($_POST['anchorEntry1']) );	
 																		}
 					 // ------------------------------------------------------------------------------------------------------------------------------------------------- //
 					 
 											  if (empty($_POST['anchorEntry2'])) {
-													$errors[] = 'Please agree or disagree - question 1.';
+													$errors[] = 'Sorry we\'re missing some Anchor entrys - please put in 3 of them..';
 												 } else {
 														 $inputAnchorEntry2 = htmlspecialchars( strip_tags($_POST['anchorEntry2']) );	
 														}
 					 // ------------------------------------------------------------------------------------------------------------------------------------------------- //
 					 
 						  if (empty($_POST['anchorEntry3'])) {
-								$errors[] = 'Please agree or disagree - question 1.';
+								$errors[] = 'Sorry we\'re missing some Anchor entrys - please put in 3 of them..';
 							 } else {
 									 $inputAnchorEntry3 = htmlspecialchars( strip_tags($_POST['anchorEntry3']) );	
 									}
@@ -151,9 +151,12 @@
 																							exit();  
 																	
 		} else  { // there was an error - display it
-								print ' <div class="alert alert-danger" role="alert">
-										 Ops! No Words have been selected.
-										</div>';
+								echo ' <div class="alert alert-danger" role="alert">
+										 Ops! It looks like something is missing!? </br>';
+										 	foreach ($errors as $msg) {
+											echo " - $msg <br />";
+										}	
+								echo '		</div>';
 		
 		} //End of if (empty($errors))
 		
@@ -233,7 +236,7 @@
 										<div class="col">
 											<div class="form-group">
 												<label for="OarEntry1" class="form-control-lg">Oar Entries</label>
-												<input type="text" class="form-control border-primary" id="OarEntry1" name="oarEntry1" placeholder="Oar entry 1">
+												<input type="text" class="form-control border-primary" id="OarEntry1" name="oarEntry1" placeholder="Oar entry 1" tabindex = "0">
 											</div>
 										</div>
 									 
@@ -248,13 +251,13 @@
 									<div class="row">
 										<div class="col">
 											<div class="form-group">
-												<input type="text" class="form-control border-primary" id="OarEntry2" name="oarEntry2" placeholder="Oar entry 2">
+												<input type="text" class="form-control border-primary" id="OarEntry2" name="oarEntry2" placeholder="Oar entry 2" >
 											</div>
 										</div>
 									 
 										<div class="col">
 											<div class="form-group">
-												<input type="text" class="form-control border-secondary" id="AnchorEntry2" name="anchorEntry2" placeholder="Anchor entry 2">
+												<input type="text" class="form-control border-secondary" id="AnchorEntry2" name="anchorEntry2" placeholder="Anchor entry 2" >
 											</div>
 										</div>
 									</div>	 
@@ -262,23 +265,23 @@
 									<div class="row">
 										<div class="col">
 											<div class="form-group">
-												<input type="text" class="form-control border-primary" id="OarEntry3" name="oarEntry3" placeholder="Oar Entry 3">
+												<input type="text" class="form-control border-primary" id="OarEntry3" name="oarEntry3" placeholder="Oar Entry 3" >
 											</div>
 										</div>
 									 
 										<div class="col">
 											<div class="form-group">
-												<input type="text" class="form-control border-secondary" id="AnchorEntry3" name="anchorEntry3" placeholder="Anchor entry 3">
+												<input type="text" class="form-control border-secondary" id="AnchorEntry3" name="anchorEntry3" placeholder="Anchor entry 3" >
 											</div>
 										</div>
 									</div>	
 									
-									<!-- <div class="float-right"><a class="btn btn-success btn-lg" href="anchors_oars_response.php">Next</a></div> -->			
-								<!-- Submit form action -->
-									<div class="float-right">
-										 <button type="submit" name="submit" class="btn btn-success btn-lg" tabindex = "1">Next</button>
-										 <input type="hidden" name="submitted" value="TRUE" />
-									</div>
+											
+									<!-- Submit form action -->
+										<div class="float-right">
+											 <button type="submit" name="submit" class="btn btn-success btn-lg" >Next</button>
+											 <input type="hidden" name="submitted" value="TRUE" />
+										</div>
 									<!-- End of button submit -->
 						
 										
