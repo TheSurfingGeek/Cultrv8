@@ -300,7 +300,7 @@
 									</div><!-- End of row 2 -->
 									
 									
-									<!-- <div class="float-right"><a class="btn btn-success btn-lg" href="share_results.php">Next</a></div> -->
+									
 									<!-- Submit form action -->
 										<div class="float-right">
 											 <button type="submit" name="submit" class="btn btn-success btn-lg" >Next</button>
