@@ -125,17 +125,107 @@
 				</div><!-- end of row 1 --->
 				
 				<div class="row"><!-- Start of row 2 -->
-					<div class="col-sm"><!-- Start of column 1 -->
+					<div class="col"><!-- Start of column 1 -->
+					
+					
+							<table class="table table-sm">
+								  <thead>
+									<tr>
+									  <th scope="col">Response </th>
+									  <th scope="col">First</th>
+									  <th scope="col">Last</th>
+									  <th scope="col">Handle</th>
+									  <th scope="col">Response </th>
+									  <th scope="col">First</th>
+									  <th scope="col">Last</th>
+									  <th scope="col">Handle</th>
+									  <th scope="col">Response </th>
+									  <th scope="col">First</th>
+									  <th scope="col">Last</th>
+									  <th scope="col">Handle</th>
+									  <th scope="col">Response </th>
+									  <th scope="col">First</th>
+									  <th scope="col">Last</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+											<?php
+													//------   Get car name from the selected id ----------------------------------------------/
+															require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
+															
+																//Get user_id and first name
+																	$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+																
+																			$car_response_select = $dbh->prepare("
+																				SELECT 	
+																						car_word_response_id,
+																						session_id,
+																						car_id,
+																						response_word1,
+																						word1_response,
+																						response1_alternative,
+																						response_word2,
+																						word2_response,
+																						response2_alternative,
+																						response_word3,
+																						word3_response,
+																						response3_alternative,
+																						response_word4,
+																						word4_response,
+																						response4_alternative,
+																						response_word5,
+																						word5_response,
+																						response5_alternative
+																						FROM car_response_word_association_response
+																						WHERE session_id = 'tei79sk8m3tkd9oj264gfi9gu4';
+																			
+																			");
+																			$car_response_select->execute();
+																		
+																				// Fetch all the rows in the result set
+																					$rowset = $car_response_select->fetchAll(PDO::FETCH_NUM);
+																						if ($rowset) { // A record was successfully retrieved
+																									foreach ($rowset as $row) {
+																											//Loop through the results and create the radio button list
+																													print '
+																														<tr>
+																														  <th scope="row">'.$row[3].'</th>
+																														  <td>'.$row[4].'</td>
+																														  <td>'.$row[5].'</td>
+																														  <td>'.$row[6].'</td>
+																														  <td>'.$row[7].'</td>
+																														  <td>'.$row[8].'</td>
+																														  <td>'.$row[9].'</td>
+																														  <td>'.$row[10].'</td>
+																														  <td>'.$row[11].'</td>
+																														  <td>'.$row[12].'</td>
+																														  <td>'.$row[13].'</td>
+																														  <td>'.$row[14].'</td>
+																														  <td>'.$row[15].'</td>
+																														  <td>'.$row[16].'</td>
+																														</tr>
+																							 							';
+																									}
+																						} else {
+																							$carSelectedName ='Nothing was found';
+																						}
+																					
+																				//Release the PDO connection
+																					$dbh = null;	
+
+													//------    End of car name selection -----------------------------------------------------/
+											?>
+										</tbody>
+						</table>
 				
-						<a class="btn btn-success btn-lg" href="join_movement.php">Next</a>
-						
 					</div><!-- End of column 1-->
 					
 				</div><!-- End of row 2 -->
 					  
 					
 				<div class="row"><!-- Start of row 3 -->
-				
+						<a class="btn btn-success btn-lg" href="join_movement.php">Next</a>
 						
 				</div><!-- end of row 3 -->
 				
