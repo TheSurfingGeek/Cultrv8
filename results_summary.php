@@ -131,21 +131,21 @@
 							<table class="table table-sm">
 								  <thead>
 									<tr>
-									  <th scope="col">Response </th>
-									  <th scope="col">First</th>
-									  <th scope="col">Last</th>
-									  <th scope="col">Handle</th>
-									  <th scope="col">Response </th>
-									  <th scope="col">First</th>
-									  <th scope="col">Last</th>
-									  <th scope="col">Handle</th>
-									  <th scope="col">Response </th>
-									  <th scope="col">First</th>
-									  <th scope="col">Last</th>
-									  <th scope="col">Handle</th>
-									  <th scope="col">Response </th>
-									  <th scope="col">First</th>
-									  <th scope="col">Last</th>
+									  <th scope="col">Associated word</th>
+									  <th scope="col">Agree/Disagree</th>
+									  <th scope="col">Alternative word</th>
+									  <th scope="col">Associated word</th>
+									  <th scope="col">Agree/Disagree</th>
+									  <th scope="col">Alternative word</th>
+									  <th scope="col">Associated word</th>
+									  <th scope="col">Agree/Disagree</th>
+									  <th scope="col">Alternative word</th>
+									  <th scope="col">Associated word</th>
+									  <th scope="col">Agree/Disagree</th>
+									  <th scope="col">Alternative word</th>
+									  <th scope="col">Associated word</th>
+									  <th scope="col">Agree/Disagree</th>
+									  <th scope="col">Alternative word</th>
 									</tr>
 								  </thead>
 								  <tbody>
@@ -190,7 +190,7 @@
 																											//Loop through the results and create the radio button list
 																													print '
 																														<tr>
-																														  <th scope="row">'.$row[3].'</th>
+																														  <td>'.$row[3].'</th>
 																														  <td>'.$row[4].'</td>
 																														  <td>'.$row[5].'</td>
 																														  <td>'.$row[6].'</td>
