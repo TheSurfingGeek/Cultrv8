@@ -128,21 +128,9 @@
 					<div class="col"><!-- Start of column 1 -->
 					
 					
-							<table class="table table-sm">
+							<table class="table-sm table-bordered">
 								  <thead>
 									<tr>
-									  <th scope="col">Associated word</th>
-									  <th scope="col">Agree/Disagree</th>
-									  <th scope="col">Alternative word</th>
-									  <th scope="col">Associated word</th>
-									  <th scope="col">Agree/Disagree</th>
-									  <th scope="col">Alternative word</th>
-									  <th scope="col">Associated word</th>
-									  <th scope="col">Agree/Disagree</th>
-									  <th scope="col">Alternative word</th>
-									  <th scope="col">Associated word</th>
-									  <th scope="col">Agree/Disagree</th>
-									  <th scope="col">Alternative word</th>
 									  <th scope="col">Associated word</th>
 									  <th scope="col">Agree/Disagree</th>
 									  <th scope="col">Alternative word</th>
@@ -162,8 +150,8 @@
 																						car_word_response_id,
 																						session_id,
 																						car_id,
-																						response_word1,
-																						word1_response,
+																						response_word1, 
+																						word1_response, 
 																						response1_alternative,
 																						response_word2,
 																						word2_response,
@@ -178,7 +166,7 @@
 																						word5_response,
 																						response5_alternative
 																						FROM car_response_word_association_response
-																						WHERE session_id = 'tei79sk8m3tkd9oj264gfi9gu4';
+																						WHERE session_id = '$mySession';
 																			
 																			");
 																			$car_response_select->execute();
@@ -193,17 +181,26 @@
 																														  <td>'.$row[3].'</th>
 																														  <td>'.$row[4].'</td>
 																														  <td>'.$row[5].'</td>
+																														</tr>
+																														<tr>
 																														  <td>'.$row[6].'</td>
 																														  <td>'.$row[7].'</td>
 																														  <td>'.$row[8].'</td>
+																														</tr> 
+																														<tr>
 																														  <td>'.$row[9].'</td>
 																														  <td>'.$row[10].'</td>
 																														  <td>'.$row[11].'</td>
+																														</tr>
+																														<tr>	
 																														  <td>'.$row[12].'</td>
 																														  <td>'.$row[13].'</td>
 																														  <td>'.$row[14].'</td>
+																														</tr>
+																														<tr>
 																														  <td>'.$row[15].'</td>
 																														  <td>'.$row[16].'</td>
+																														  <td>'.$row[17].'</td>
 																														</tr>
 																							 							';
 																									}
