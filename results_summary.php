@@ -108,7 +108,7 @@
 							  
 								  <h3>Car selected: 
 										<div class="alert alert-success" role="alert">
-											<?php echo $carSelectedName; ?></h2>
+											<?php echo $carSelectedName; ?>
 										</div>
 								  </h3>
 							  
