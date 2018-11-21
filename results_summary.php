@@ -104,30 +104,14 @@
 						<div class="col-sm"><!-- Column 1 -->
 					
 							  <h1 class="mt-4">Results Summary</h1>
-							  <h2>Break down of results...</h2>
 							  
-								  <h3>Car selected: 
-										<div class="alert alert-success" role="alert">
-											<?php echo $carSelectedName; ?>
-										</div>
-								  </h3>
-							  
-							  <h3>Car association: </h3>
-							  
-						</div><!-- End of column 1-->
+								  <h2>Car selected: </h2>
+										<h3><div class="alert alert-success" role="alert">
+												<?php echo $carSelectedName; ?>
+										</div></h3>
+								  
+								  <h2>Car association results: </h2>
 						
-						<div class="col-sm"><!-- Column 2 -->
-							<div class="text-center">
-								<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
-							</div>
-						</div><!-- End of column 2 -->
-						    
-				</div><!-- end of row 1 --->
-				
-				<div class="row"><!-- Start of row 2 -->
-					<div class="col"><!-- Start of column 1 -->
-					
-					
 							<table class="table-sm table-bordered">
 								  <thead>
 									<tr>
@@ -137,7 +121,7 @@
 									</tr>
 								  </thead>
 								  <tbody>
-									<tr>
+									
 											<?php
 													//------   Get car name from the selected id ----------------------------------------------/
 															require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
@@ -215,14 +199,157 @@
 											?>
 										</tbody>
 						</table>
+								  
+							  
+						</div><!-- End of column 1-->
+						
+						<div class="col-sm"><!-- Column 2 -->
+							<div class="text-center">
+								<img src="img/Crab_home_big_logo.jpg" class="img-fluid float-right" alt="Cultrv8 Crab Logo">
+							</div>
+						</div><!-- End of column 2 -->
+						    
+				</div><!-- end of row 1 --->
 				
+				<div class="row"><!-- Start of row 2 -->
+					<div class="col"><!-- Start of column 1 -->
+					
+						<h2>Anchors & Oars Responses: </h2>
+						
+						<table class="table-sm table-bordered">
+								  <thead>
+									<tr>
+									  <th scope="col">Anchor Response 1</th>
+									  <th scope="col">Anchor Response 2</th>
+									  <th scope="col">Anchor Response 3</th>
+									  <th scope="col">Oars Response 1</th>
+									  <th scope="col">Oars Response 2</th>
+									  <th scope="col">Oars Response 3</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+						
+																<?php
+																							//------   Get car name from the selected id ----------------------------------------------/
+																									require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
+																									
+																										//Get user_id and first name
+																											$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+																										
+																													$anchor_oar_responses_select = $dbh->prepare("
+																														SELECT 
+																															anchors_response1, 
+																															anchors_response2, 
+																															anchors_response3,
+																															oars_response1,
+																															oars_response2, 
+																															oars_response3
+																															FROM anchors_oars_response
+																															WHERE session_id = '$mySession';
+																													");
+																													$anchor_oar_responses_select->execute();
+																												
+																														// Fetch all the rows in the result set
+																															$rowset = $anchor_oar_responses_select->fetchAll(PDO::FETCH_NUM);
+																																if ($rowset) { // A record was successfully retrieved
+																																			foreach ($rowset as $row) {
+																																					//Loop through the results and create the radio button list
+																																							print '
+																																								<tr>
+																																								  <td>'.$row[0].'</th>
+																																								  <td>'.$row[1].'</td>
+																																								  <td>'.$row[2].'</td>
+																																								  <td>'.$row[3].'</td>
+																																								  <td>'.$row[4].'</td>
+																																								  <td>'.$row[5].'</td>
+																																								</tr>
+																																								';
+																																			}
+																																} else {
+																																	$carSelectedName ='Nothing was found';
+																																}
+																															
+																														//Release the PDO connection
+																															$dbh = null;	
+
+																							//------    End of car name selection -----------------------------------------------------/
+																					?>
+										</tbody>
+						</table>
+						
+						
+				 
 					</div><!-- End of column 1-->
 					
 				</div><!-- End of row 2 -->
 					  
 					
 				<div class="row"><!-- Start of row 3 -->
+				
+					<div class="col"><!-- Start of column 1 -->
+						<h2>Anchors & Oars Association Responses: </h2>
+						
+						<table class="table-sm table-bordered">
+								  <thead>
+									<tr>
+									  <th scope="col">Selected Anchor</th>
+									  <th scope="col">Selected Anchor Theme</th>
+									  <th scope="col">Selected Oar</th>
+									  <th scope="col">Selected Oar Theme</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+						
+																<?php
+																							//------   Get car name from the selected id ----------------------------------------------/
+																									require('./dbscripts/cultrv8_mysql_PDO_connect.php'); 
+																									
+																										//Get user_id and first name
+																											$dbh = new PDO('mysql:host='. DB_HOST .';dbname=' .DB_NAME, DB_USER, DB_PASSWORD);
+																										
+																													$anchor_oar_response_select = $dbh->prepare("
+																														SELECT 
+																															selected_anchor,
+																															selected_anchor_theme,
+																															selected_oar,
+																															selected_oar_theme 
+																															FROM anchors_oars_theme_selection
+																															WHERE session_id = '$mySession';
+																													");
+																													$anchor_oar_response_select->execute();
+																												
+																														// Fetch all the rows in the result set
+																															$rowset = $anchor_oar_response_select->fetchAll(PDO::FETCH_NUM);
+																																if ($rowset) { // A record was successfully retrieved
+																																			foreach ($rowset as $row) {
+																																					//Loop through the results and create the radio button list
+																																							print '
+																																								<tr>
+																																								  <td>'.$row[0].'</th>
+																																								  <td>'.$row[1].'</td>
+																																								  <td>'.$row[2].'</td>
+																																								  <td>'.$row[3].'</td>
+																																								</tr>
+																																								';
+																																			}
+																																} else {
+																																	$carSelectedName ='Nothing was found';
+																																}
+																															
+																														//Release the PDO connection
+																															$dbh = null;	
+
+																							//------    End of car name selection -----------------------------------------------------/
+																					?>
+										</tbody>
+						</table>
+					</div> <!-- end of column 1 -->
+				
+					<div class="col"><!-- Start of column 2 -->
 						<a class="btn btn-success btn-lg" href="join_movement.php">Next</a>
+					</div>
 						
 				</div><!-- end of row 3 -->
 				
