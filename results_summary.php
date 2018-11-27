@@ -110,7 +110,7 @@
 												<?php echo $carSelectedName; ?>
 										</div></h3>
 								  
-								  <h2>Car association results: </h2>
+								  <h2 class="mt-4 mb-3">Car association results: </h2>
 						
 							<table class="table-sm table-bordered">
 								  <thead>
@@ -214,7 +214,7 @@
 				<div class="row"><!-- Start of row 2 -->
 					<div class="col"><!-- Start of column 1 -->
 					
-						<h2>Anchors & Oars Responses: </h2>
+						<h2 class="mt-4 mb-3">Anchors & Oars Responses: </h2>
 						
 						<table class="table-sm table-bordered">
 								  <thead>
@@ -288,7 +288,7 @@
 				<div class="row"><!-- Start of row 3 -->
 				
 					<div class="col"><!-- Start of column 1 -->
-						<h2>Anchors & Oars Association Responses: </h2>
+						<h2 class="mt-4 mb-3">Anchors & Oars Association Responses: </h2>
 						
 						<table class="table-sm table-bordered">
 								  <thead>
@@ -346,12 +346,15 @@
 										</tbody>
 						</table>
 					</div> <!-- end of column 1 -->
-				
-					<div class="col"><!-- Start of column 2 -->
-						<a class="btn btn-success btn-lg" href="join_movement.php">Next</a>
-					</div>
-						
+					
 				</div><!-- end of row 3 -->
+				
+				<div class="row"><!-- Start of row 4 -->
+				
+							<div class="col"><!-- Start of column 1 -->
+									<a class="btn btn-success btn-lg mt-3" href="join_movement.php">Next</a>
+							</div>
+				</div><!-- end of row 4 -->
 				
 			</div><!-- End of the container -->
 			
