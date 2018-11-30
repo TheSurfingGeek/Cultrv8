@@ -51,7 +51,7 @@
 					 // ------------------------------------------------------------------------------------------------------------------------------------------------ //
 					
 									 if (empty($_POST['oarThemeSelect'])) {
-											$errors[] = 'Sorry we\'re missing an theme selectio - please select one of the oar themes from the list.';
+											$errors[] = 'Sorry we\'re missing an theme selectio - please select one of the Oar themes from the list.';
 										 } else {
 												 $oarThemeSelect = htmlspecialchars( strip_tags($_POST['oarThemeSelect']) );	
 												}
@@ -130,7 +130,15 @@
 																					header("Location: $url");
 																						exit();  
 													
-													} //End of if (empty($errors))
+													} else  { // there was an error - display it
+																echo ' <div class="alert alert-danger" role="alert">
+																		 Ops! It looks like something is missing!? </br>';
+																			foreach ($errors as $msg) {
+																			echo " - $msg <br />";
+																		}	
+																echo '		</div>';
+													
+													}//End of if (empty($errors))
 		
 	} //End of submit php
 	
@@ -243,6 +251,7 @@
 																						<div class="form-group">
 																								<label for="anchorTheme" class="form-control-lg">Select theme category</label>
 																								<select class="form-control border-secondary" id="anchorTheme" name="anchorThemeSelect">
+																									  <option value="">Select theme...</option>
 																									  <option value="Theme1">Theme 1</option>
 																									  <option value="Theme2">Theme 2</option>
 																									  <option value="Theme3">Theme 3</option>
@@ -290,6 +299,7 @@
 														<div class="form-group">
 																<label for="oarTheme" class="form-control-lg">Select theme category</label>
 																<select class="form-control border-primary" id="oarTheme" name="oarThemeSelect">
+																	  <option value="">Select theme...</option>
 																	  <option value="Theme1">Theme 1</option>
 																	  <option value="Theme2">Theme 2</option>
 																	  <option value="Theme3">Theme 3</option>

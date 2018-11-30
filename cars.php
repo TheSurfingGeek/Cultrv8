@@ -81,9 +81,6 @@
 										<a class="btn btn-success btn-lg" href="index.php">Back <span class="sr-only">(current)</span></a>
 									  </li>
 									  
-									  <li class="nav-item ml-4 mr-2">
-										<a class="btn btn-success btn-lg" href="cars_response.php">Next</a>
-									  </li>
 									</ul>
 								</div>
 			</nav>

@@ -121,7 +121,15 @@
 																					header("Location: $url");
 																						exit();
 													
-													} //End of if (empty($errors))
+													}else  { // there was an error - display it
+																echo ' <div class="alert alert-danger" role="alert">
+																		 Ops! It looks like something is missing!? </br>';
+																			foreach ($errors as $msg) {
+																			echo " - $msg <br />";
+																		}	
+																echo '		</div>';
+													
+													}//End of if (empty($errors))
 		
 	} //End of submit php
 	
